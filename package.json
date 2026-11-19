@@ -1,0 +1,25 @@
+{
+  "name": "parsielectronic",
+  "version": "1.0.0",
+  "description": "Gaming Systems Store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrammm068/ParsiElectronic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pedrammm068/ParsiElectronic/issues"
+  },
+  "homepage": "https://github.com/pedrammm068/ParsiElectronic#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "tailwindcss": "^4.3.5"
+  }
+}
