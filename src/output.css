@@ -32,6 +32,7 @@
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-medium: 500;
+    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --leading-snug: 1.375;
     --radius-lg: 0.5rem;
@@ -535,6 +536,9 @@
   .bg-amber-900 {
     background-color: var(--color-amber-900);
   }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -647,6 +651,10 @@
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
   }
   .whitespace-nowrap {
     white-space: nowrap;
@@ -775,6 +783,9 @@
     }
     .hover\:bg-\[\#171717\]:hover {
       background-color: #171717;
+    }
+    .hover\:bg-\[\#572727\]:hover {
+      background-color: #572727;
     }
     .hover\:text-\[\#1693ff\]:hover {
       color: #1693ff;

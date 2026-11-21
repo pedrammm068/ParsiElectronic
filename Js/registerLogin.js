@@ -102,4 +102,51 @@ loginErrMsg.textContent = `خوش آمدید ${user.userN}! در حال انتق
 
 })
 
+} 
+
+
+
+const registerLoginbtn = document.getElementById("registerLogin-btn")
+const userprof = document.getElementById("user-prof")
+const userNdis = document.getElementById("userN-dis")
+const logoutbtn = document.getElementById("logout-btn")
+
+const logInUser = JSON.parse(localStorage.getItem("parsiLogInUser"))
+
+if (logInUser) {
+if (registerLoginbtn) {
+    registerLoginbtn.classList.add("hidden")
+}
+
+if (userprof) {
+    userprof.classList.remove("hidden")
+    userprof.classList.add("flex")
+
+}
+
+if(userNdis) {
+    userNdis.textContent = ` سلام , ${logInUser.userN}`
+}
+}
+
+    else {
+        
+        if(registerLoginbtn) {
+            registerLoginbtn.classList.remove("hidden")
+            
+        }
+        if (userprof) {
+            userprof.classList.add("hidden")
+            userprof.classList.remove("flex")
+            
+        }
+        
+    }
+    
+    
+if(logoutbtn) {
+    logoutbtn.addEventListener( "click",() => {
+localStorage.removeItem("parsiLogInUser")
+window.location.reload()
+    })
 }

@@ -12,6 +12,8 @@
     <title>Parsi Electronic | فروشگاه تخصصی کامپیوتر</title>
 
     <script src="./Js/slider.js" defer></script>
+    <script src="./Js/registerLogin.js" defer></script>
+
   </head>
   <body>
     
@@ -57,12 +59,22 @@
 
           <!-- left bar-b  -->
 
-          <div
+          <div id="registerLogin-btn"
             class="bg-[#1683FF] flex text-center gap-2 transition hover:bg-[#0066D6] px-4 py-2 text-white whitespace-nowrap rounded-lg"
           >
             <a href="./html/login.html"><p>ورود</p></a>
             <span>|</span>
             <a href="./html/register.html"><p>ثبت نام</p></a>
+          </div>
+
+
+          <div id="user-prof" class="hidden items-center gap-4">
+<span id="userN-dis" class="text-sm font-semibold text-[#1683ff]"></span>
+<button id="logout-btn" class="bg-red-500 hover:bg-[#572727] text-sm text-white rounded-lg transition px-4 py-2">
+
+  خروج
+</button>
+
           </div>
 
           <!-- left bar-b  -->
