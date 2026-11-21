@@ -25,7 +25,7 @@ showError(ermas , "لطفا فیلد ها را پر کنید")
 return
 }
 
-if(userP.length < 8) {
+if(userP.length < 8 || userP.length >= 22) {
 showError(ermas , "رمز عبور حداقل باید 8 کارکتر باشه")
 return
 }
@@ -150,3 +150,6 @@ localStorage.removeItem("parsiLogInUser")
 window.location.reload()
     })
 }
+
+
+ 
