@@ -1,0 +1,197 @@
+[
+
+{
+    "id": 1,
+    "title": "سیستم گیمینگ STARTER RTX 5060",
+    "price": "300,000,000",
+    "image": "../img/products/1.png",
+    "status": "موجود",
+    "description": "Core i5-13400F، کارت گرافیک RTX 5060 8GB، رم 32GB DDR4، حافظه SSD یک ترابایت، مادربرد B760 و پاور 650W. مناسب گیمینگ Full HD."
+  },
+  {
+    "id": 2,
+    "title": "سیستم گیمینگ SCORPION RTX 5060",
+    "price": "380,900,000",
+    "image": "../img/products/2.png",
+    "status": "موجود",
+    "description": "Core i5-14400F، کارت گرافیک RTX 5060 8GB، رم 32GB DDR5، SSD یک ترابایت NVMe و کیس RGB با خنک‌کننده بادی."
+  },
+  {
+    "id": 3,
+    "title": "سیستم گیمینگ PHANTOM RTX 5060 Ti",
+    "price": "509,500,000",
+    "image": "../img/products/3.png",
+    "status": "موجود",
+    "description": "Ryzen 5 9600X، کارت گرافیک RTX 5060 Ti 8GB، رم 32GB DDR5، SSD یک ترابایت و مادربرد B850. مناسب بازی‌های جدید."
+  },
+  {
+    "id": 4,
+    "title": "سیستم گیمینگ TITAN RX 9060 XT",
+    "price": "600,000,000",
+    "image": "../img/products/4.png",
+    "status": "موجود",
+    "description": "Ryzen 5 9600X، کارت گرافیک RX 9060 XT 16GB، رم 32GB DDR5، SSD دو ترابایت و پاور 750W."
+  },
+  {
+    "id": 5,
+    "title": "سیستم گیمینگ WARRIOR RTX 5070",
+    "price": "650,000,000",
+    "image": "../img/products/5.png",
+    "status": "موجود",
+    "description": "Ryzen 7 7700، کارت گرافیک RTX 5070 12GB، رم 32GB DDR5، SSD دو ترابایت و خنک‌کننده مایع 240 میلی‌متری."
+  },
+  {
+    "id": 6,
+    "title": "سیستم گیمینگ DARK KNIGHT RX 9070 XT",
+    "price": "748,400,000",
+    "image": "../img/products/6.png",
+    "status": "موجود",
+    "description": "Ryzen 7 9700X، کارت گرافیک RX 9070 XT 16GB، رم 32GB DDR5، SSD دو ترابایت و کیس حرفه‌ای با نورپردازی RGB."
+  },
+  {
+    "id": 7,
+    "title": "سیستم گیمینگ VIPER RTX 5070 Ti",
+    "price": "790,000,000",
+    "image": "../img/products/7.png",
+    "status": "موجود",
+    "description": "Ryzen 7 7800X3D، کارت گرافیک RTX 5070 Ti 16GB، رم 32GB DDR5، SSD دو ترابایت و خنک‌کننده مایع 360 میلی‌متری."
+  },
+  {
+    "id": 8,
+    "title": "سیستم گیمینگ BLACK STORM RTX 5070 Ti",
+    "price": "845,000,000",
+    "image": "../img/products/8.png",
+    "status": "موجود",
+    "description": "Ryzen 7 9800X3D، کارت گرافیک RTX 5070 Ti 16GB، رم 64GB DDR5، SSD دو ترابایت و پاور 850W Gold."
+  },
+  {
+    "id": 9,
+    "title": "سیستم گیمینگ ICE DRAGON RTX 5080",
+    "price": "911,200,000",
+    "image": "../img/products/9.png",
+    "status": "موجود",
+    "description": "Ryzen 7 9800X3D، کارت گرافیک RTX 5080 16GB، رم 32GB DDR5، SSD دو ترابایت و خنک‌کننده مایع 360 میلی‌متری."
+  },
+  {
+    "id": 10,
+    "title": "سیستم گیمینگ ROG STRIX RTX 5080",
+    "price": "1,400,000,000",
+    "image": "../img/products/10.png",
+    "status": "موجود",
+    "description": "Core Ultra 9 285K، کارت گرافیک ASUS RTX 5080 16GB، رم 64GB DDR5، SSD دو ترابایت Samsung و کیس ASUS ROG."
+  },
+  {
+    "id": 11,
+    "title": "سیستم گیمینگ THUNDER RTX 5080",
+    "price": "1,500,080,000",
+    "image": "../img/products/11.png",
+    "status": "موجود",
+    "description": "Core Ultra 9 285K، کارت گرافیک RTX 5080 OC 16GB، رم 64GB DDR5، SSD دو ترابایت و خنک‌کننده مایع حرفه‌ای."
+  },
+  {
+    "id": 12,
+    "title": "سیستم گیمینگ NEMESIS RTX 5080",
+    "price": "1,880,000,000",
+    "image": "../img/products/12.png",
+    "status": "موجود",
+    "description": "Core Ultra 9 285K، کارت گرافیک ASUS TUF RTX 5080 16GB، رم 128GB DDR5، SSD یک ترابایت Samsung 990 PRO و کیس ROG Strix Helios."
+  },
+  {
+    "id": 13,
+    "title": "سیستم گیمینگ OVERLORD RTX 5080",
+    "price": "1,999,299,000",
+    "image": "../img/products/13.png",
+    "status": "موجود",
+    "description": "Ryzen 9 9950X3D، کارت گرافیک RTX 5080 16GB، رم 64GB DDR5، SSD چهار ترابایت و خنک‌کننده مایع 360 میلی‌متری."
+  },
+  {
+    "id": 14,
+    "title": "سیستم گیمینگ GODLIKE RTX 5080",
+    "price": "2,450,000,000",
+    "image": "../img/products/14.png",
+    "status": "موجود",
+    "description": "Ryzen 9 9950X3D، کارت گرافیک MSI RTX 5080 16GB، رم 128GB DDR5، حافظه SSD چهار ترابایت و مادربرد X870E."
+  },
+  {
+    "id": 15,
+    "title": "سیستم گیمینگ HYPERION RTX 5090",
+    "price": "3,400,000,000",
+    "image": "../img/products/15.png",
+    "status": "موجود",
+    "description": "Ryzen 9 9950X3D، کارت گرافیک RTX 5090 32GB، رم 64GB DDR5، SSD دو ترابایت و پاور 1200W مناسب پردازش‌های سنگین."
+  },
+  {
+    "id": 16,
+    "title": "سیستم گیمینگ DARK EMPEROR RTX 5090",
+    "price": "3,670,000,000",
+    "image": "../img/products/16.png",
+    "status": "موجود",
+    "description": "Ryzen 9 9950X3D، کارت گرافیک ASUS TUF RTX 5090 32GB، رم 128GB DDR5، SSD چهار ترابایت و خنک‌کننده مایع 360 میلی‌متری."
+  },
+  {
+    "id": 17,
+    "title": "سیستم گیمینگ ROG ELITE RTX 5090",
+    "price": "3,900,000,000",
+    "image": "../img/products/17.png",
+    "status": "موجود",
+    "description": "Ryzen 9 9950X3D2، کارت گرافیک RTX 5090 32GB، رم 128GB DDR5، SSD چهار ترابایت Samsung و مادربرد حرفه‌ای X870E."
+  },
+  {
+    "id": 18,
+    "title": "سیستم گیمینگ TITAN PRIME RTX 5090",
+    "price": "4,303,000,000",
+    "image": "../img/products/18.png",
+    "status": "موجود",
+    "description": "Ryzen 9 9950X3D2، کارت گرافیک ASUS ROG Astral RTX 5090، رم 128GB DDR5، SSD چهار ترابایت و کیس ASUS ROG Hyperion."
+  },
+  {
+    "id": 19,
+    "title": "سیستم گیمینگ INFINITY RTX 5090",
+    "price": "4,900,590,000",
+    "image": "../img/products/19.png",
+    "status": "موجود",
+    "description": "Ryzen 9 9950X3D2، کارت گرافیک RTX 5090 32GB، رم 128GB DDR5، حافظه SSD چهار ترابایت و پاور 1600W."
+  },
+  {
+    "id": 20,
+    "title": "سیستم گیمینگ ROG GOD RTX 5090",
+    "price": "5,420,000,000",
+    "image": "../img/products/20.png",
+    "status": "موجود",
+    "description": "Ryzen 9 9950X3D2، کارت گرافیک ASUS ROG Astral RTX 5090، رم 128GB DDR5، SSD چهار ترابایت و خنک‌کننده مایع پرچمدار."
+  },
+  {
+    "id": 21,
+    "title": "سیستم گیمینگ ULTIMATE RTX 5090",
+    "price": "5,780,000,000",
+    "image": "../img/products/21.png",
+    "status": "موجود",
+    "description": "Ryzen 9 9950X3D2، کارت گرافیک RTX 5090 32GB، رم 192GB DDR5، SSD چهار ترابایت و مادربرد MSI X870E."
+  },
+  {
+    "id": 22,
+    "title": "سیستم گیمینگ GALAXY RTX 5090",
+    "price": "6,000,000,000",
+    "image": "../img/products/22.png",
+    "status": "موجود",
+    "description": "Ryzen 9 9950X3D2، کارت گرافیک ASUS ROG Astral RTX 5090، رم 192GB DDR5، SSD هشت ترابایت و کیس ASUS ROG Hyperion."
+  },
+  {
+    "id": 23,
+    "title": "سیستم گیمینگ SUPREME RTX 5090",
+    "price": "6,350,000,000",
+    "image": "../img/products/23.png",
+    "status": "موجود",
+    "description": "Ryzen 9 9950X3D2، کارت گرافیک RTX 5090 نسخه OC، رم 192GB DDR5، حافظه SSD هشت ترابایت، پاور 1600W و خنک‌کننده مایع سفارشی."
+  },
+  {
+    "id": 24,
+    "title": "سیستم گیمینگ ULTIMATE GODLIKE RTX 5090",
+    "price": "7,000,000,000",
+    "image": "../img/products/24.png",
+    "status": "موجود",
+    "description": "سیستم پرچمدار با Ryzen 9 9950X3D2، کارت گرافیک ASUS ROG Astral RTX 5090 32GB، رم 256GB DDR5، حافظه SSD هشت ترابایت، مادربرد MSI X870E، پاور 1600W و خنک‌کننده مایع سفارشی."
+  }
+  
+
+]
