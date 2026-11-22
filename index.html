@@ -13,10 +13,13 @@
 
     <script src="./Js/slider.js" defer></script>
     <script src="./Js/registerLogin.js" defer></script>
+    <script src="./Js/cart.js" defer></script>
+
 
   </head>
   <body>
     
+
     <!-- Header start -->
     
     <header class="w-full bg-[#171717] text-white">
@@ -42,7 +45,7 @@
         <div class="flex items-center text-center gap-5">
           <!-- right bar-b  -->
 
-          <div class="flex text-center whitespace-nowrap gap-2">
+          <div id="cart-btn" class="flex text-center whitespace-nowrap gap-2">
             <p>سبد خرید</p>
             <svg
               class="w-8 h-8"
@@ -127,17 +130,20 @@
     <!-- Header end -->
    
 
+    <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-[100] flex flex-col gap-3 ">
+
+</div>
 
 
 
         <!-- cart open -->
 
-        <div id="cart-over" class="fixed inset-0 bg-black/70 hidden z-40 transition-opacity duration-500"></div>
+        <div id="cart-over" class="fixed inset-0 bg-black/30 backdrop-blur hidden z-40 transition-opacity duration-800"></div>
 
 
-<div class="fixed top-0 left-0 h-full w-full z-50 shadow-2xltransform translate-x-full transition-transform duration-200 flex flex-col border-r border-gray-800  " id="cart-sidebar">
+<div class="fixed top-0 right-0 h-full w-[400px] z-50 shadow-2xl transform translate-x-full  transition-transform duration-500 flex flex-col border-r border-gray-800  " id="cart-sidebar">
 
-  <div class="flex items-center  justify-between p-4 border-b border-gray-800">
+  <div  class="flex items-center  justify-between p-4 border-b border-gray-800">
 <span class="text-xl font-bold text-white">سبد خرید شما</span>
 
 <button id="clos-cart" class="text-gray-400 hover:text-red-400 transition">
@@ -149,7 +155,7 @@
   </div>
 
 
-  <div id="cart-item-conteiner" class="flex grow overflow-y-auto p-4 space-y-4">
+  <div id="cart-item-conteiner" class="flex grow justify-center overflow-y-auto p-4 space-y-4">
 
 <p class="mt-10 text-center text-gray-500">سبد خرید شما خالیه</p>
 
@@ -161,12 +167,13 @@
 <div class="flex items-center justify-between mb-4 ">
 
   <span class="text-gray-400 font-semibold ">جمع کل:</span>
-  <span id="cart-all-price" class="text-xl font-bold text-[#1683ff]">تومان 0</span>
+  <span id="cart-all-price" class="text-xl font-bold text-[#1683ff]"> 0 تومان</span>
 
-
- 
 </div>
 
+<div id="chek" class="w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
+<span>تکمیل خرید</span>
+</div>
 
   </div>
 
@@ -362,7 +369,7 @@
  </div>
 </div>
 
-<div class="w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
+<div class=" add-to-cart-btn w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
 <span>افزودن به سبد خرید</span>
 </div>
 
@@ -396,7 +403,7 @@
  </div>
 </div>
 
-<div class="w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
+<div class="add-to-cart-btn w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
 <span>افزودن به سبد خرید</span>
 </div>
 
@@ -433,7 +440,7 @@
  </div>
 </div>
 
-<div class="w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
+<div class="add-to-cart-btn w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
 <span>افزودن به سبد خرید</span>
 </div>
 
@@ -471,7 +478,7 @@
  </div>
 </div>
 
-<div class="w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
+<div class="add-to-cart-btn w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
 <span>افزودن به سبد خرید</span>
 </div>
 
@@ -709,6 +716,8 @@
     
     <!-- footer end -->
 
+    <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-[100] flex flex-col gap-3 ">
+</div>
 
 
 

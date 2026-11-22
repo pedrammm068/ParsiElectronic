@@ -42,7 +42,12 @@ overflow-hidden group transition duration-300">
               </div>
 
               <button class="w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4 rounded-xl">
-                افزودن به سبد خرید
+                              data-id="${product.id}"
+        data-name="${product.title}"
+        data-price="${product.price.replace(/,/g, '')}"
+        data-image="${product.image}">
+              افزودن به سبد خرید
+            
               </button>
             </div>
 
