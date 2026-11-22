@@ -45,7 +45,7 @@ overflow-hidden group transition duration-300">
         data-name="${product.title}"
         data-price="${product.price.replace(/,/g, '')}"
         data-image="${product.image}"
-         class="add-to-cart-btn w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4 rounded-xl">
+         class="add-to-cart-btn w-full cursor-pointer bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4 rounded-xl">
                              
               افزودن به سبد خرید
             

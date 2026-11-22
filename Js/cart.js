@@ -144,13 +144,23 @@ return
             
             <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-contain shrink-0">
             
-            <div class="flex flex-col grow min-w-0 mx-3">
-                <h4 class="text-sm font-bold text-white truncate">${item.name}</h4>
-                <p class="text-xs text-gray-400">${item.price.toLocaleString()} تومان</p>
-                <span class="text-xs text-[#1683FF]">تعداد: ${item.quantity}</span>
+           <div class="flex flex-col grow min-w-0">
+                <h4 class="text-xs font-bold text-white truncate">${item.name}</h4>
+                <p class="text-[10px] text-gray-400">${item.price.toLocaleString()} تومان</p>
+
+
+                  <div class="flex items-center gap-3 mt-1">
+                    <button class="decrease-qty bg-gray-700 hover:bg-gray-600 text-white w-6 h-6 rounded flex items-center justify-center text-lg" data-id="${item.id}">-</button>
+                    <span class="text-xs font-bold text-[#1683FF] w-4 text-center">${item.quantity}</span>
+                    <button class="increase-qty bg-gray-700 hover:bg-gray-600 text-white w-6 h-6 rounded flex items-center justify-center text-lg" data-id="${item.id}">+</button>
+                </div>
+            </div>
+
+
+                <span class="text-xs flex gap-2 text-[#1683FF]">تعداد: ${item.quantity}</span>
             </div>
             
-            <button class="remove-item-btn text-red-500 hover:text-red-400 shrink-0" data-id="${item.id}">
+            <button class="remove-item-btn shrink-0" data-id="${item.id}">
               <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">
 <g id="Menu / Close_SM">
 <path id="Vector" d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -158,6 +168,7 @@ return
 </svg>
             </button>
         </div>
+        <div class="border-b border-gray-700 w-full"></div>
     `
    })
 
@@ -174,7 +185,47 @@ Btn.onclick = (e) => {
 }
    })
 
+   
+   document.querySelectorAll(".remove-item-btn").forEach((Btn) => {
+       Btn.onclick = (e) => {
+           const idRemov = e.currentTarget.getAttribute("data-id")
+            cart = cart.filter((item) => item.id !== idRemov)
+           localStorage.setItem("parsiCart" , JSON.stringify(cart))
+           renderCart()
+           ShowToset("محصول از سبد خرید حذف شد.", "error")
+       }
+   })
+   
+    document.querySelectorAll(".increase-qty").forEach((Btn) => {
+          Btn.onclick = (e) => {
+              const idToInc = e.currentTarget.getAttribute("data-id");
+              const item = cart.find(i => i.id === idToInc);
+              if (item) {
+                  item.quantity += 1;
+                  localStorage.setItem("parsiCart", JSON.stringify(cart));
+                  renderCart();
+              }
+          }
+      })
+   
+       document.querySelectorAll(".decrease-qty").forEach((Btn) => {
+          Btn.onclick = (e) => {
+              const idToDec = e.currentTarget.getAttribute("data-id");
+              const item = cart.find(i => i.id === idToDec);
+              if (item) {
+                  if (item.quantity > 1) {
+                      item.quantity -= 1;
+                  } else {
+                      cart = cart.filter(i => i.id !== idToDec);
+                      ShowToset("محصول از سبد خرید حذف شد.", "error");
+                  }
+                  localStorage.setItem("parsiCart", JSON.stringify(cart));
+                  renderCart();
+              }
+          }
+        })
 }
+
 
 renderCart()
 Clos()
