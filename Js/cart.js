@@ -4,6 +4,8 @@ const cartover = document.getElementById("cart-over")
 const closcart = document.getElementById("clos-cart")
 const addtocart = document.querySelectorAll(".add-to-cart-btn")
 const toast = document.getElementById("toast")
+ const cartconteiner = document.getElementById("cart-item-conteiner")
+ const allprice = document.getElementById("cart-all-price")
 function OpenCart () {
     if(cartsidebar) {
         cartsidebar.classList.remove("translate-x-full")
@@ -42,7 +44,7 @@ if(cartover) {
 }
 
 
-function ShowToset(mas , type = error) {
+function ShowToset(mas , type = "error") {
 if(!toast) return
 
 const toastshow = document.createElement("div")
@@ -76,11 +78,15 @@ const icon = type === "error" ?
 
 
 
-let cart = JSON.parse(localStorage.getItem("parsiCart") || [])
+let cart = JSON.parse(localStorage.getItem("parsiCart") || "[]")
 
 
 
 function SetAddCard() {
+
+const addtocart = document.querySelectorAll(".add-to-cart-btn")
+
+
 addtocart.forEach(Btn => {
     Btn.onclick  = e => {
         const logeedUs = JSON.parse(localStorage.getItem("parsiLogInUser"))
@@ -91,6 +97,86 @@ addtocart.forEach(Btn => {
             } , 2000)
             return
         }
+        const BtnEl = e.currentTarget 
+        const productID = BtnEl.getAttribute("data-id")
+         const productName = BtnEl.getAttribute("data-name");
+      const productPrice = parseInt(BtnEl.getAttribute("data-price"));
+      console.log("قیمت خام:", productPrice);
+      const productImage = BtnEl.getAttribute("data-image");
+    
+    
+    
+        const adding = cart.find((item) => item.id === productID)
+        if (adding) {
+            adding.quantity += 1
+
+        } else {
+            cart.push({id: productID, name: productName, price: productPrice, image: productImage, quantity: 1})
+        }
+
+        localStorage.setItem("parsiCart" , JSON.stringify(cart))
+    
+        OpenCart()
+        renderCart();
+        ShowToset("محصول به سبد خرید اضافه شد.", "success");
     }
 });
 }
+
+
+function renderCart() {
+   if(!cartconteiner || !allprice) {
+    return
+   }
+   if(cart.length === 0) {
+    cartconteiner.innerHTML = `<p class="mt-10 text-center text-gray-500">سبد خرید شما خالیه</p>`
+    allprice.textContent = "تومان 0"
+return
+   }
+   cartconteiner.innerHTML = ""
+   let totalprice = 0
+
+   cart.forEach((item) => {
+    totalprice += item.price * item.quantity
+    cartconteiner.innerHTML +=
+`
+        <div class="flex items-center justify-between bg-[#222222] p-3 rounded-lg border border-gray-700 w-full mb-3 overflow-hidden">
+            
+            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-contain shrink-0">
+            
+            <div class="flex flex-col grow min-w-0 mx-3">
+                <h4 class="text-sm font-bold text-white truncate">${item.name}</h4>
+                <p class="text-xs text-gray-400">${item.price.toLocaleString()} تومان</p>
+                <span class="text-xs text-[#1683FF]">تعداد: ${item.quantity}</span>
+            </div>
+            
+            <button class="remove-item-btn text-red-500 hover:text-red-400 shrink-0" data-id="${item.id}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">
+<g id="Menu / Close_SM">
+<path id="Vector" d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+            </button>
+        </div>
+    `
+   })
+
+
+   allprice.textContent = `${totalprice.toLocaleString()} تومان`;
+
+   document.querySelectorAll(".remove-item-btn").forEach((Btn) =>  {
+Btn.onclick = (e) => {
+    const idRemov = e.currentTarget.getAttribute("data-id")
+    cart = cart.filter((item) => item.id !== idRemov)
+    localStorage.setItem("parsiCart" , JSON.stringify(cart))
+    renderCart()
+    ShowToset("محصول از سبد خرید حذف شد.", "error")
+}
+   })
+
+}
+
+renderCart()
+Clos()
+SetAddCard()
+setTimeout(SetAddCard , 700)

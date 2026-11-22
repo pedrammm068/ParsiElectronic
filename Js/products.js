@@ -25,7 +25,7 @@ overflow-hidden group transition duration-300">
 
 </div>
 
-<div class="p-5 flex flex-col flex-grow">
+<div class="p-5 flex flex-col grow">
 
 
               <span class="text-lg font-bold text-white">مشخصات:</span>
@@ -41,11 +41,12 @@ overflow-hidden group transition duration-300">
               </div>
               </div>
 
-              <button class="w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4 rounded-xl">
-                              data-id="${product.id}"
+              <button  data-id="${product.id}"
         data-name="${product.title}"
         data-price="${product.price.replace(/,/g, '')}"
-        data-image="${product.image}">
+        data-image="${product.image}"
+         class="add-to-cart-btn w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4 rounded-xl">
+                             
               افزودن به سبد خرید
             
               </button>
@@ -66,3 +67,4 @@ overflow-hidden group transition duration-300">
       container.innerHTML = `<p class="text-center col-span-full text-red-500">خطا در بارگذاری محصولات.</p>`;
       
     })
+  
