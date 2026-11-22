@@ -26,7 +26,16 @@ return
 }
 
 if(userP.length < 8 || userP.length >= 22) {
-showError(ermas , "رمز عبور حداقل باید 8 کارکتر باشه")
+showError(ermas , "رمز عبور حداقل باید 8 کارکتر باشه تا 22 کارکتر باشه")
+return
+}
+
+const Upcase = /[A-Z]/.test(userP)
+const Lowcase = /[a-z]/.test(userP)
+const Numberhs = /[0-9]/.test(userP)
+
+if (!Upcase || !Lowcase || !Numberhs) {
+showError(ermas , "رمز عبور باید شامل حروف بزرگ و حروف کوچیک و اعداد باشد")
 return
 }
 
@@ -150,6 +159,28 @@ localStorage.removeItem("parsiLogInUser")
 window.location.reload()
     })
 }
+
+
+function setTog(BtnId , InputId) {
+const btn = document.getElementById(BtnId)
+const Input = document.getElementById(InputId)
+
+if(btn && Input) {
+    btn.addEventListener("click" , () => {
+        if(Input.type === "password" ) {
+            Input.type = "text"
+        } else {
+            Input.type = "password"
+        }
+
+
+
+    })
+}
+
+}
+setTog("togell" , "regUserP")
+   setTog("togell", "LogUserP")
 
 
  
