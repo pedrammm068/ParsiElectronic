@@ -58,7 +58,7 @@ function ShowProduct() {
                             </div>
                             <div class="flex gap-4 text-left">
                             <span class="text-2xl text-ice red:text-gray-500">قیمت:</span>
-                            <span class="text-3xl font-bold text-gray-200">${product.price} 
+                            <span class="text-3xl font-bold red:text-electric-red text-gray-200">${product.price} 
                             <span class="text-base font-normal text-ice red:text-gray-500">تومان</span>
                             </span>
                             </div>

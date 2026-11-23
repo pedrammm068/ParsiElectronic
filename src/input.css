@@ -1,23 +1,28 @@
 @import "tailwindcss";
+:root {
+    --sb-track: #171717;
+    --sb-thumb: #1683FF;
+    --sb-thumb-hover: #0066D6;
+}
+
+.red-theme {
+    --sb-track: #F0F4F8;
+    --sb-thumb: #FF1744;
+    --sb-thumb-hover: #D50032;
+}
 
 ::-webkit-scrollbar {
-
-width: 10px ;
-
+    width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: #171717;
+    background: var(--sb-track);
 }
-
 ::-webkit-scrollbar-thumb {
-    background: #1683FF;
-    border-radius: 12px ;
+    background: var(--sb-thumb);
+    border-radius: 12px;
 }
-
-
 ::-webkit-scrollbar-thumb:hover {
-    background: #0066D6;
-    border-radius: 12px ;
+    background: var(--sb-thumb-hover);
 }
 
 @custom-variant red (&:where(.red-theme, .red-theme *));
