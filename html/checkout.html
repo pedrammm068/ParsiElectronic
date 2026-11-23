@@ -13,10 +13,13 @@
     <script src="../Js/checkout.js" defer></script>
   </head>
   <body>
+
     <div class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+        
       <div
         class="w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden relative border border-gray-100"
       >
+     
         <div class="text-black bg-[#FFD700] text-center relative">
 
             <div class="flex items-center p-4 justify-between">
@@ -61,7 +64,7 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <span class="font-mono" id="timer">10:00</span>
+                <span class="font-mono" id="timer">00:30</span>
            </div>
           
       
@@ -85,17 +88,18 @@
           <div class="">
 <label class="block text-sm font-medium  text-gray-600 text-right mb-4" for="">شماره کارت:</label>
 <input class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-4 text-center text-lg font-mono transition-all" placeholder="**** **** **** ****" dir="ltr" id="cart-num" type="text" maxlength="19">
-
+    <div class="mt-2" id="toast"></div>
 <div class="flex gap-6">
+ 
 <div class="w-1/2">
 <label class="block text-sm font-medium  text-gray-600 text-right mb-4"  for="">تاریخ انقضا: </label>
-<input class="w-full bg-gray-50 border border-gray-300 rounded-xl px-2 py-2  text-lg font-mono transition-all" maxlength="5" dir="ltr" placeholder="MM/YY" type="text">
+<input class="w-full bg-gray-50 border border-gray-300 rounded-xl px-2 py-2  text-lg font-mono transition-all" maxlength="4" dir="ltr" placeholder="MM/YY" type="text">
 
 </div>
 
 <div class="w-1/2">
 <label class="block text-sm font-medium  text-gray-600 text-right mb-4"  for="">CVV2:</label>
-<input class="w-full bg-gray-50 border border-gray-300 rounded-xl px-2 py-2  text-lg font-mono transition-all" maxlength="5" dir="ltr" type="text">
+<input class="w-full bg-gray-50 border border-gray-300 rounded-xl px-2 py-2  text-lg font-mono transition-all" maxlength="4" dir="ltr" type="text">
 
 </div>
 </div>
@@ -125,6 +129,8 @@
         </div>
       </div>
     </div>
+    
       </div>
+      
   </body>
 </html>

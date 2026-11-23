@@ -6,6 +6,7 @@ const addtocart = document.querySelectorAll(".add-to-cart-btn")
 const toast = document.getElementById("toast")
  const cartconteiner = document.getElementById("cart-item-conteiner")
  const allprice = document.getElementById("cart-all-price")
+ const chek =  document.getElementById("chek")
 function OpenCart () {
     if(cartsidebar) {
         cartsidebar.classList.remove("translate-x-full")
@@ -173,7 +174,7 @@ return
    })
 
 
-   allprice.textContent = `${totalprice.toLocaleString()} تومان`;
+   allprice.textContent = `${totalprice.toLocaleString()} تومان`
 
    document.querySelectorAll(".remove-item-btn").forEach((Btn) =>  {
 Btn.onclick = (e) => {
@@ -225,6 +226,20 @@ Btn.onclick = (e) => {
           }
         })
 }
+
+
+chek.addEventListener("click" , (e) => {
+       const cart = JSON.parse(localStorage.getItem("parsiCart") || "[]")
+       if(!cart || cart.length === 0) {
+          ShowToset("سبد خرید شما خالی است! ابتدا محصولی اضافه کنید.", "error")
+            return;
+       }
+           if (window.location.pathname.includes("/html/")) {
+            window.location.href = "./checkout.html"
+        } else {
+            window.location.href = "./html/checkout.html"
+        }
+})
 
 
 renderCart()

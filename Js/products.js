@@ -1,5 +1,8 @@
 const container = document.getElementById("products_container")
 
+
+   
+  
 fetch("../html/products.json") 
 .then( res => {
     if (!res.ok) {
@@ -67,4 +70,4 @@ overflow-hidden group transition duration-300">
       container.innerHTML = `<p class="text-center col-span-full text-red-500">خطا در بارگذاری محصولات.</p>`;
       
     })
-  
+
