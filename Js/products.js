@@ -19,10 +19,10 @@ fetch("../html/products.json")
 products.forEach(product => {
     const CardHTML = `
 
-    <div class="product-card rounded-2xl bg-[#171717] border border-b-gray-100 shadow-lg hover:shadow-2xl flex flex-col 
+    <div class="product-card rounded-2xl  bg-charcoal red:bg-ice/95 red:border-charcoal/25 border border-b-gray-100 shadow-lg hover:shadow-2xl flex flex-col 
 overflow-hidden group transition duration-300">
 <a href="./product-id.html?id=${product.id}" class="block">
-<div class="p-4 h-56 bg-[#222222] flex items-center justify-center relative">
+<div class="p-4 h-56  bg-charcoal red:bg-ice/95 red:border-charcoal/25 flex items-center justify-center relative">
 
     <img class="max-h-full transition duration-500 object-contain group-hover:scale-110" src="${product.image}" alt="${product.title}">
 
@@ -31,15 +31,15 @@ overflow-hidden group transition duration-300">
 <div class="p-5 flex flex-col grow">
 
 
-              <span class="text-lg font-bold text-white">مشخصات:</span>
+              <span class="text-lg font-bold text-white red:text-electric-red">مشخصات:</span>
 <a href="./product-product-id?id=${product.id}">
-     <h3 class="text-lg font-bold mb-2 text-white leading-snug">${product.title}</h3>      
+     <h3 class="text-lg font-bold mb-2 red:text-electric-red text-white leading-snug">${product.title}</h3>      
 </a>
               <div class="flex items-center justify-between mt-auto mb-4">
-              <span class="text-sm text-green-500">${product.status}</span>
-              <div class="flex items-center justify-center text-center gap-2 ">
-              <span class="text-lg font-bold text-white">قیمت:</span>
-              <span class="text-lg font-bold text-white">${product.price}</span>
+              <span class="text-sm red:text-charcoal text-green-500">${product.status}</span>
+              <div class="flex  items-center justify-center text-center gap-2 ">
+              <span class="text-lg font-bold red:text-electric-red text-white">قیمت:</span>
+              <span class="text-lg font-bold red:text-electric-red text-white">${product.price}</span>
               </div>
               </div>
 
@@ -47,7 +47,7 @@ overflow-hidden group transition duration-300">
         data-name="${product.title}"
         data-price="${product.price.replace(/,/g, '')}"
         data-image="${product.image}"
-         class="add-to-cart-btn w-full cursor-pointer bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4 rounded-xl">
+         class="add-to-cart-btn w-full cursor-pointer bg-electric red:bg-electric-red red:text-ice red:hover:bg-[#d60007] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4 rounded-xl">
                              
               افزودن به سبد خرید
             

@@ -90,6 +90,10 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-electric: #1683FF;
+    --color-charcoal: #171717;
+    --color-ice: #F0F4F8;
+    --color-electric-red: #FF1744;
   }
 }
 @layer base {
@@ -372,6 +376,9 @@
   }
   .mx-auto {
     margin-inline: auto;
+  }
+  .my-20 {
+    margin-block: calc(var(--spacing) * 20);
   }
   .mt-0 {
     margin-top: 0px;
@@ -1043,6 +1050,27 @@
   .bg-blue-800 {
     background-color: var(--color-blue-800);
   }
+  .bg-charcoal {
+    background-color: var(--color-charcoal);
+  }
+  .bg-charcoal\/5 {
+    background-color: color-mix(in srgb, #171717 5%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-charcoal) 5%, transparent);
+    }
+  }
+  .bg-charcoal\/20 {
+    background-color: color-mix(in srgb, #171717 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-charcoal) 20%, transparent);
+    }
+  }
+  .bg-electric {
+    background-color: var(--color-electric);
+  }
+  .bg-electric-red {
+    background-color: var(--color-electric-red);
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
@@ -1069,6 +1097,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-green-500) 90%, transparent);
     }
+  }
+  .bg-ice {
+    background-color: var(--color-ice);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -1147,6 +1178,9 @@
   }
   .p-11 {
     padding: calc(var(--spacing) * 11);
+  }
+  .p-12 {
+    padding: calc(var(--spacing) * 12);
   }
   .p-16 {
     padding: calc(var(--spacing) * 16);
@@ -1358,6 +1392,9 @@
   .text-\[\#1683ff\] {
     color: #1683ff;
   }
+  .text-\[\#171717\] {
+    color: #171717;
+  }
   .text-\[\#393939\] {
     color: #393939;
   }
@@ -1373,8 +1410,17 @@
   .text-blue-600 {
     color: var(--color-blue-600);
   }
+  .text-charcoal {
+    color: var(--color-charcoal);
+  }
   .text-cyan-400 {
     color: var(--color-cyan-400);
+  }
+  .text-electric {
+    color: var(--color-electric);
+  }
+  .text-electric-red {
+    color: var(--color-electric-red);
   }
   .text-gray-200 {
     color: var(--color-gray-200);
@@ -1402,6 +1448,9 @@
   }
   .text-green-600 {
     color: var(--color-green-600);
+  }
+  .text-ice {
+    color: var(--color-ice);
   }
   .text-purple-50 {
     color: var(--color-purple-50);
@@ -1591,6 +1640,12 @@
     .hover\:bg-black:hover {
       background-color: var(--color-black);
     }
+    .hover\:bg-charcoal:hover {
+      background-color: var(--color-charcoal);
+    }
+    .hover\:bg-electric:hover {
+      background-color: var(--color-electric);
+    }
     .hover\:bg-gray-100:hover {
       background-color: var(--color-gray-100);
     }
@@ -1599,6 +1654,9 @@
     }
     .hover\:bg-green-400:hover {
       background-color: var(--color-green-400);
+    }
+    .hover\:bg-ice:hover {
+      background-color: var(--color-ice);
     }
     .hover\:bg-red-500:hover {
       background-color: var(--color-red-500);
@@ -1621,11 +1679,20 @@
     .hover\:text-black:hover {
       color: var(--color-black);
     }
+    .hover\:text-electric:hover {
+      color: var(--color-electric);
+    }
+    .hover\:text-ice:hover {
+      color: var(--color-ice);
+    }
     .hover\:text-red-400:hover {
       color: var(--color-red-400);
     }
     .hover\:text-red-600:hover {
       color: var(--color-red-600);
+    }
+    .hover\:text-white:hover {
+      color: var(--color-white);
     }
     .hover\:shadow-2xl:hover {
       --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
@@ -1755,6 +1822,122 @@
     .md\:text-base {
       font-size: var(--text-base);
       line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+  }
+  .red\:border-charcoal\/25:where(.red-theme, .red-theme *) {
+    border-color: color-mix(in srgb, #171717 25%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-charcoal) 25%, transparent);
+    }
+  }
+  .red\:bg-charcoal:where(.red-theme, .red-theme *) {
+    background-color: var(--color-charcoal);
+  }
+  .red\:bg-electric-red:where(.red-theme, .red-theme *) {
+    background-color: var(--color-electric-red);
+  }
+  .red\:bg-ice:where(.red-theme, .red-theme *) {
+    background-color: var(--color-ice);
+  }
+  .red\:bg-ice\/90:where(.red-theme, .red-theme *) {
+    background-color: color-mix(in srgb, #F0F4F8 90%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-ice) 90%, transparent);
+    }
+  }
+  .red\:bg-ice\/95:where(.red-theme, .red-theme *) {
+    background-color: color-mix(in srgb, #F0F4F8 95%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-ice) 95%, transparent);
+    }
+  }
+  .red\:text-charcoal:where(.red-theme, .red-theme *) {
+    color: var(--color-charcoal);
+  }
+  .red\:text-electric-red:where(.red-theme, .red-theme *) {
+    color: var(--color-electric-red);
+  }
+  .red\:text-gray-400:where(.red-theme, .red-theme *) {
+    color: var(--color-gray-400);
+  }
+  .red\:text-gray-500:where(.red-theme, .red-theme *) {
+    color: var(--color-gray-500);
+  }
+  .red\:text-gray-700:where(.red-theme, .red-theme *) {
+    color: var(--color-gray-700);
+  }
+  .red\:text-gray-800:where(.red-theme, .red-theme *) {
+    color: var(--color-gray-800);
+  }
+  .red\:text-ice:where(.red-theme, .red-theme *) {
+    color: var(--color-ice);
+  }
+  .red\:text-white:where(.red-theme, .red-theme *) {
+    color: var(--color-white);
+  }
+  @media (hover: hover) {
+    :is(:where(.group):hover .red\:group-hover\:bg-electric-red\/20:where(.red-theme, .red-theme *)) {
+      background-color: color-mix(in srgb, #FF1744 20%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      :is(:where(.group):hover .red\:group-hover\:bg-electric-red\/20:where(.red-theme, .red-theme *)) {
+        background-color: color-mix(in oklab, var(--color-electric-red) 20%, transparent);
+      }
+    }
+    :is(:where(.group):hover .red\:group-hover\:bg-electric-red\/80:where(.red-theme, .red-theme *)) {
+      background-color: color-mix(in srgb, #FF1744 80%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      :is(:where(.group):hover .red\:group-hover\:bg-electric-red\/80:where(.red-theme, .red-theme *)) {
+        background-color: color-mix(in oklab, var(--color-electric-red) 80%, transparent);
+      }
+    }
+    .hover\:red\:bg-electric-red:hover:where(.red-theme, .red-theme *) {
+      background-color: var(--color-electric-red);
+    }
+    .hover\:red\:bg-ice:hover:where(.red-theme, .red-theme *) {
+      background-color: var(--color-ice);
+    }
+    .red\:hover\:bg-\[\#cd0502\]:where(.red-theme, .red-theme *):hover {
+      background-color: #cd0502;
+    }
+    .red\:hover\:bg-\[\#d60000\]:where(.red-theme, .red-theme *):hover {
+      background-color: #d60000;
+    }
+    .red\:hover\:bg-\[\#d60007\]:where(.red-theme, .red-theme *):hover {
+      background-color: #d60007;
+    }
+    .red\:hover\:bg-charcoal:where(.red-theme, .red-theme *):hover {
+      background-color: var(--color-charcoal);
+    }
+    .red\:hover\:bg-electric-red\/50:where(.red-theme, .red-theme *):hover {
+      background-color: color-mix(in srgb, #FF1744 50%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .red\:hover\:bg-electric-red\/50:where(.red-theme, .red-theme *):hover {
+        background-color: color-mix(in oklab, var(--color-electric-red) 50%, transparent);
+      }
+    }
+    .red\:hover\:bg-ice:where(.red-theme, .red-theme *):hover {
+      background-color: var(--color-ice);
+    }
+    .hover\:red\:text-electric-red:hover:where(.red-theme, .red-theme *) {
+      color: var(--color-electric-red);
+    }
+    .red\:hover\:red\:text-charcoal:where(.red-theme, .red-theme *):hover:where(.red-theme, .red-theme *) {
+      color: var(--color-charcoal);
+    }
+    .red\:hover\:red\:text-electric-red:where(.red-theme, .red-theme *):hover:where(.red-theme, .red-theme *) {
+      color: var(--color-electric-red);
+    }
+    .red\:hover\:text-charcoal:where(.red-theme, .red-theme *):hover {
+      color: var(--color-charcoal);
+    }
+    .red\:hover\:text-electric-red:where(.red-theme, .red-theme *):hover {
+      color: var(--color-electric-red);
+    }
+    .red\:hover\:text-ice:where(.red-theme, .red-theme *):hover {
+      color: var(--color-ice);
     }
   }
 }

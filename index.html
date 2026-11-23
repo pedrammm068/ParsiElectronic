@@ -25,7 +25,7 @@
 
     <!-- Header start -->
     
-    <header class="w-full bg-[#171717] text-white">
+    <header class="w-full bg-charcoal text-ice red:bg-ice red:text-electric-red">
       <!-- head bar -->
       <div
         class="container mx-auto flex items-center text-center justify-between px-6 py-4"
@@ -66,7 +66,7 @@
           <!-- left bar-b  -->
 
           <div id="registerLogin-btn"
-            class="bg-[#1683FF] flex text-center gap-2 transition hover:bg-[#0066D6] px-4 py-2 text-white whitespace-nowrap rounded-lg"
+            class="bg-electric-red flex text-center gap-2 transition hover:bg-charcoal hover:text-ice px-4 py-2 text-white whitespace-nowrap rounded-lg"
           >
             <a href="./html/login.html"><p>ورود</p></a>
             <span>|</span>
@@ -75,8 +75,8 @@
           
           
           <div id="user-prof" class="hidden items-center gap-4">
-<span id="userN-dis" class="text-sm font-semibold text-[#1683ff]"></span>
-<button id="logout-btn" class="bg-red-500 hover:bg-[#572727] text-sm text-white rounded-lg transition px-4 py-2">
+<span id="userN-dis" class="text-sm font-semibold text-electric red:text-electric-red"></span>
+<button id="logout-btn" class="bg-electric hover:text-electric hover:bg-ice red:bg-electric-red cursor-pointer red:hover:bg-charcoal red:hover:text-ice text-sm text-white rounded-lg transition px-4 py-2">
 
   خروج
 </button>
@@ -101,35 +101,35 @@
       <!-- head bar -->
 
       <!-- foot bar -->
-      <div class="bg-[#0066D6] flex p-1 pl-0 pr-0">
+      <div class="bg-electric red:bg-electric-red flex p-1 pl-0 pr-0">
         <nav
-          class="bg-[#171717] flex w-full h-12 items-stretch px-4 justify-center text-center"
+          class="bg-charcoal red:bg-ice flex w-full h-12 items-stretch px-4 justify-center text-center"
         >
           <ul
-            class="bg-[#171717] flex gap-10 w-full h-full container px-4 text-center"
+            class="bg-charcoal red:bg-ice flex gap-10 w-full h-full container px-4 text-center"
           >
             <a
-              class="hover:bg-[#0066D6] flex items-center px-4 transition"
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white flex items-center px-4 transition"
               href="./index.html"
               ><li>صفحه اصلی</li></a
             >
             <a
-              class="hover:bg-[#0066D6] flex items-center px-4 transition"
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white flex items-center px-4 transition"
               href="#boro"
               ><li>محصولات</li></a
             >
             <a
-              class="hover:bg-[#0066D6] flex items-center px-4 transition"
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white flex items-center px-4 transition"
               href="#"
               ><li>مشاوره و دریافت کانفیگ</li></a
             >
             <a
-              class="hover:bg-[#0066D6] flex items-center px-4 transition"
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white flex items-center px-4 transition"
               href="#"
               ><li>دانستنی ها</li></a
             >
             <a
-              class="hover:bg-[#0066D6] flex items-center px-4 transition"
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white flex items-center px-4 transition"
               href="#"
               ><li>درباره ما</li></a
             >
@@ -154,10 +154,10 @@
         <div id="cart-over" class="fixed inset-0 bg-black/30 backdrop-blur hidden z-40 transition-opacity duration-800"></div>
 
 
-<div class="fixed top-0 right-0 h-full w-[400px] z-50 shadow-2xl transform translate-x-full  transition-transform duration-500 flex flex-col border-r border-gray-800  " id="cart-sidebar">
+<div class="fixed top-0 right-0 h-full w-[400px] z-50 shadow-2xl transform translate-x-full transition-transform duration-500 flex flex-col border-r border-gray-800 bg-ice text-charcoal red:bg-charcoal red:text-ice" id="cart-sidebar">
 
   <div  class="flex items-center  justify-between p-4 border-b border-gray-800">
-<span class="text-xl font-bold text-white">سبد خرید شما</span>
+<span class="text-xl font-bold">سبد خرید شما</span>
 
 <button id="clos-cart" class="text-gray-400 hover:text-red-400 transition">
   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">
@@ -172,19 +172,19 @@
 
 <p class="mt-10 text-center text-gray-500">سبد خرید شما خالیه</p>
 
-  </div>
+  </div>s
 
 
 
-  <div class="p-4 border-t border-gray-800 bg-[#171717]">
+  <div class="p-4 border-t border-gray-300 bg-ice text-charcoal red:bg-charcoal red:text-ice">
 <div class="flex items-center justify-between mb-4 ">
 
-  <span class="text-gray-400 font-semibold ">جمع کل:</span>
-  <span id="cart-all-price" class="text-xl font-bold text-[#1683ff]"> 0 تومان</span>
+  <span class="text-gray-600 red:text-gray-400 font-semibold">جمع کل:</span>
+  <span id="cart-all-price" class="text-xl font-bold text-electric red:text-electric-red">تومان 0</span>
 
 </div>
 
-<div id="chek" class="w-full cursor-pointer bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
+<div id="chek" class="w-full cursor-pointer  bg-electric text-center transition duration-300 hover:bg-[#0066D6] red:hover:bg-[#d60000] red:bg-electric-red font-bold text-white py-4  rounded-xl">
 <span>تکمیل خرید</span>
 </div>
 
@@ -210,7 +210,7 @@
     <!-- main start -->
     
 
-    <main class="w-full bg-white py-8">
+    <main class="w-full red:bg-ice red:text-charcoal bg-charcoal text-ice py-8">
       
 
       <!-- slider start -->
@@ -258,7 +258,7 @@
 
           <button
             id="PrevBt"
-            class="absolute top-1/2 right-4 -translate-y-1/2 z-20 bg-white/60 hover:bg-[#1683FF] w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 duration-300 backdrop-blur-sm border border-white/20"
+            class="absolute top-1/2 right-4 -translate-y-1/2 z-20 bg-white/60 hover:bg-electric w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 duration-300 backdrop-blur-sm border border-white/20"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -299,7 +299,7 @@
 
           <button
             id="NextBt"
-            class="absolute top-1/2 left-4 -translate-y-1/2 z-20 bg-white/60 hover:bg-[#1683FF] w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 duration-300 backdrop-blur-sm border border-white/20"
+            class="absolute top-1/2 left-4 -translate-y-1/2 z-20 bg-white/60 hover:bg-electric w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 duration-300 backdrop-blur-sm border border-white/20"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -351,7 +351,7 @@
 
 <div class="flex items-center justify-center mb-8">
 
-<h2 id="boro" class="font-bold text-xl text-gray-800">محصولات  ارزان سایت</h2>
+<h2 id="boro" class="font-bold text-xl text-ice red:text-electric-red">محصولات  ارزان سایت</h2>
 
 
 
@@ -361,29 +361,29 @@
 <div class="grid grid-cols-4 gap-8 mb-8">
 
 
-  <div class="product-card rounded-2xl bg-[#171717]  shadow-lg hover:shadow-2xl border border-gray-100 flex flex-col  transition duration-300  overflow-hidden ">
+  <div class="product-card rounded-2xl bg-charcoal red:bg-ice/95 red:border-charcoal/25  shadow-lg hover:shadow-2xl border border-gray-100 flex flex-col  transition duration-300  overflow-hidden ">
 
   <a href="./html/product-id.html?id=1" class="block w-full h-full  justify-center items-center">
-  <div class="p-4 h-56 bg-[#222222]  flex items-center justify-center  relative">
+  <div class="p-4 h-56 bg-[#222222] red:bg-ice/95 red:border-charcoal/25 flex items-center justify-center  relative">
     <img class="max-h-full transition duration-300 object-contain group-hover:scale-110 " src="./img/products/1.png" alt="PC1">
 
   </div>
 </a>
   <div class="p-5 flex flex-col 	grow">
            
-    <span class="text-lg font-bold text-white">مشخصات:</span>
+    <span class="text-lg font-bold text-white red:text-electric-red">مشخصات:</span>
       <a href="./html/product-id.html?id=1" class="block w-full h-full  justify-center items-center">
-    <h3 class="text-lg font-bold  mb-2 text-white leading-snug">سیستم گیمینگ STARTER RTX 5060</h3>
+    <h3 class="text-lg font-bold  mb-2 red:text-electric-red text-white leading-snug">سیستم گیمینگ STARTER RTX 5060</h3>
 </a>
 <div class="flex items-center justify-between mt-auto mb-4">
-<span class="text-sm text-green-500">موجود</span>
+<span class="text-sm red:text-charcoal text-green-500">موجود</span>
  <div class="flex items-center justify-center text-center gap-2 ">
-              <span class="text-lg font-bold text-white">قیمت:</span>
-<span class="text-lg font-bold text-white">300.000.000</span>
+              <span class="text-lg font-bold red:text-electric-red text-white">قیمت:</span>
+<span class="text-lg font-bold red:text-electric-red text-white">300.000.000</span>
  </div>
 </div>
 
-<div data-id="1" data-name="سیستم گیمینگ STARTER RTX 5060" data-price="300000000" data-image="../img/products/1.png" class="cursor-pointer add-to-cart-btn w-full bg-[#1683FF]  text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
+<div data-id="1" data-name="سیستم گیمینگ STARTER RTX 5060" data-price="300000000" data-image="../img/products/1.png" class="cursor-pointer add-to-cart-btn w-full bg-electric red:bg-electric-red red:text-ice red:hover:bg-[#d60007]  text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
 <span>افزودن به سبد خرید</span>
 </div>
 
@@ -396,29 +396,29 @@
 
 
   
-  <div class="product-card rounded-2xl bg-[#171717]  shadow-lg hover:shadow-2xl border border-gray-100 flex flex-col  transition duration-300  overflow-hidden ">
+  <div class="product-card rounded-2xl bg-charcoal red:bg-ice/95 red:border-charcoal/25  shadow-lg hover:shadow-2xl border border-gray-100 flex flex-col  transition duration-300  overflow-hidden ">
 
  <a href="./html/product-id.html?id=2" class="block w-full h-full ">
-  <div class="p-4 h-56 bg-[#222222]  flex items-center justify-center  relative">
+  <div class="p-4 h-56 bg-[#222222] red:bg-ice/95 red:border-charcoal/25 flex items-center justify-center  relative">
     <img class="max-h-full transition duration-300 object-contain group-hover:scale-110 " src="./img/products/2.png" alt="PC1">
 
   </div>
 </a>
  <div class="p-5 flex flex-col 	grow">
            
-    <span class="text-lg font-bold text-white">مشخصات:</span>
+    <span class="text-lg font-bold red:text-electric-red text-white">مشخصات:</span>
     <a href="./html/product-id.html?id=2" class="block w-full h-full ">
-    <h3 class="text-lg font-bold  mb-2 text-white leading-snug">سیستم گیمینگ SCORPION RTX 5060</h3>
+    <h3 class="text-lg font-bold  mb-2 red:text-electric-red text-white leading-snug">سیستم گیمینگ SCORPION RTX 5060</h3>
 </a>
 <div class="flex items-center justify-between mt-auto mb-4">
-<span class="text-sm text-green-500">موجود</span>
+<span class="text-sm red:text-charcoal text-green-500">موجود</span>
  <div class="flex items-center justify-center text-center gap-2 ">
-              <span class="text-lg font-bold text-white">قیمت:</span>
-<span class="text-lg font-bold text-white">380.900.000</span>
+              <span class="text-lg font-bold red:text-electric-red text-white">قیمت:</span>
+<span class="text-lg font-bold red:text-electric-red text-white">380.900.000</span>
  </div>
 </div>
 
-<div data-id="2" data-name="سیستم گیمینگ SCORPION RTX 5060" data-price="380900000" data-image="../img/products/2.png" class="add-to-cart-btn w-full bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold cursor-pointer text-white py-4  rounded-xl">
+<div data-id="2" data-name="سیستم گیمینگ SCORPION RTX 5060" data-price="380900000" data-image="../img/products/2.png" class="cursor-pointer add-to-cart-btn w-full bg-electric red:bg-electric-red red:text-ice red:hover:bg-[#d60007]  text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
 <span>افزودن به سبد خرید</span>
 </div>
 
@@ -434,10 +434,10 @@
 
 
   
-  <div class="product-card rounded-2xl bg-[#171717]  shadow-lg hover:shadow-2xl border border-gray-100 flex flex-col  transition duration-300  overflow-hidden ">
+  <div class="product-card rounded-2xl bg-charcoal red:bg-ice/95 red:border-charcoal/25  shadow-lg hover:shadow-2xl border border-gray-100 flex flex-col  transition duration-300  overflow-hidden ">
 
      <a href="./html/product-id.html?id=3" class=" w-full h-full block">
-  <div class="p-4 h-56 bg-[#222222]  flex items-center justify-center  relative">
+  <div class="p-4 h-56 bg-[#222222] red:bg-ice/95 red:border-charcoal/25 flex items-center justify-center  relative">
     <img class="max-h-full transition duration-300 object-contain group-hover:scale-110 " src="./img/products/3.png" alt="PC1">
 
   </div>
@@ -445,19 +445,19 @@
 
    <div class="p-5 flex flex-col 	grow">
            
-    <span class="text-lg font-bold text-white">مشخصات:</span>
+    <span class="text-lg font-bold red:text-electric-red text-white">مشخصات:</span>
     <a href="./html/product-id.html?id=3" class=" w-full h-full block">
-    <h3 class="text-lg font-bold  mb-2 text-white leading-snug">سیستم گیمینگ PHANTOM RTX 5060 Ti</h3>
+    <h3 class="text-lg font-bold red:text-electric-red mb-2 text-white leading-snug">سیستم گیمینگ PHANTOM RTX 5060 Ti</h3>
 </a>
 <div class="flex items-center justify-between mt-auto mb-4">
-<span class="text-sm text-green-500">موجود</span>
+<span class="text-sm red:text-charcoal text-green-500">موجود</span>
  <div class="flex items-center justify-center text-center gap-2 ">
-              <span class="text-lg font-bold text-white">قیمت:</span>
-<span class="text-lg font-bold text-white">509.500.000</span>
+              <span class="text-lg font-bold red:text-electric-red text-white">قیمت:</span>
+<span class="text-lg font-bold red:text-electric-red text-white">509.500.000</span>
  </div>
 </div>
 
-<div  data-id="3" data-name="سیستم گیمینگ PHANTOM RTX 5060 Ti" data-price="509500000" data-image="../img/products/3.png" class="add-to-cart-btn w-full bg-[#1683FF] text-center cursor-pointer transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
+<div  data-id="3" data-name="سیستم گیمینگ PHANTOM RTX 5060 Ti" data-price="509500000" data-image="../img/products/3.png" class="cursor-pointer add-to-cart-btn w-full bg-electric red:bg-electric-red red:text-ice red:hover:bg-[#d60007]  text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
 <span>افزودن به سبد خرید</span>
 </div>
 
@@ -474,29 +474,29 @@
 
 
   
-  <div class="product-card rounded-2xl bg-[#171717]  shadow-lg hover:shadow-2xl border border-gray-100 flex flex-col  transition duration-300  overflow-hidden ">
+  <div class="product-card rounded-2xl bg-charcoal red:bg-ice/95 red:border-charcoal/25  shadow-lg hover:shadow-2xl border border-gray-100 flex flex-col  transition duration-300  overflow-hidden ">
 
  <a href="./html/product-id.html?id=4" class=" w-full h-full block">
-  <div class="p-4 h-56 bg-[#222222]  flex items-center justify-center  relative">
+  <div class="p-4 h-56 bg-[#222222] red:bg-ice/95 red:border-charcoal/25 flex items-center justify-center  relative">
     <img class="max-h-full transition duration-300 object-contain group-hover:scale-110 " src="./img/products/4.png" alt="PC1">
 
   </div>
 </a>
   <div class="p-5 flex flex-col 	grow">
            
-    <span class="text-lg font-bold text-white">مشخصات:</span>
+    <span class="text-lg font-bold red:text-electric-red text-white">مشخصات:</span>
      <a href="./html/product-id.html?id=4" class=" w-full h-full block">
-    <h3 class="text-lg font-bold  mb-2 text-white leading-snug">سیستم گیمینگ TITAN RX 9060 XT</h3>
+    <h3 class="text-lg font-bold  mb-2 red:text-electric-red text-white leading-snug">سیستم گیمینگ TITAN RX 9060 XT</h3>
 </a>
 <div class="flex items-center justify-between mt-auto mb-4">
-<span class="text-sm text-green-500">موجود</span>
+<span class="text-sm red:text-charcoal text-green-500">موجود</span>
  <div class="flex items-center justify-center text-center gap-2 ">
-              <span class="text-lg font-bold text-white">قیمت:</span>
-<span class="text-lg font-bold text-white">600.000.000</span>
+              <span class="text-lg font-bold red:text-electric-red text-white">قیمت:</span>
+<span class="text-lg font-bold red:text-electric-red text-white">600.000.000</span>
  </div>
 </div>
 
-<div  data-id="4" data-name="سیستم گیمینگ TITAN RX 9060 XT" data-price="600000000" data-image="../img/products/4.png" class="add-to-cart-btn w-full bg-[#1683FF] text-center cursor-pointer transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
+<div  data-id="4" data-name="سیستم گیمینگ TITAN RX 9060 XT" data-price="600000000" data-image="../img/products/4.png" class="cursor-pointer add-to-cart-btn w-full bg-electric red:bg-electric-red red:text-ice red:hover:bg-[#d60007]  text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
 <span>افزودن به سبد خرید</span>
 </div>
 
@@ -512,7 +512,7 @@
 
 
 <div class="w-full flex justify-center mb-8 mt-4">
-  <a href="./html/products.html" class="bg-[#1683FF] hover:bg-[#171717] text-white transition duration-800  font-bold text-lg py-3 px-10 rounded-xl shadow-lg">
+  <a href="./html/products.html" class="bg-electric hover:bg-charcoal red:bg-electric-red red:hover:bg-ice red:hover:text-electric-red  text-white transition duration-800  font-bold text-lg py-3 px-10 rounded-xl shadow-lg">
     تمام محصولات
   </a>
 </div>
@@ -539,8 +539,8 @@
   </div>
 
   <div class="text-center mb-10">
-<h4 class="text-2xl font-bold text-gray-800  mb-4">دنیای اکشن فیگور با زیتازی</h4>
-<p class="text-gray-600 text-justify">      اگر به دنبال اکشن فیگورهای اورجینال و کلکسیونی از شخصیت‌های محبوب فیلم‌ها، بازی‌ها و انیمه‌ها هستید،
+<h4 class="text-2xl font-bold text-ice red:text-electric-red mb-4">دنیای اکشن فیگور با زیتازی</h4>
+<p class="text-ice red:text-electric-red text-justify">      اگر به دنبال اکشن فیگورهای اورجینال و کلکسیونی از شخصیت‌های محبوب فیلم‌ها، بازی‌ها و انیمه‌ها هستید،
    فروشگاه آنلاین زیتازی یکی از معتبرترین گزینه‌هاست. این فروشگاه با تنوع بی‌نظیر محصولات، ضمانت اصالت کالا، قیمت‌های رقابتی و ارسال سریع، تجربه‌ای مطمئن و لذت‌بخش برای کلکسیون‌داران و علاقه‌مندان به دنیای فیگورها فراهم کرده است.
   </p>
 
@@ -590,8 +590,8 @@
 
 
 <div class="text-center mb-10">
-<h4 class="text-2xl font-bold text-gray-800  mb-4">نکاتی که باید قبل از خرید کامپیوتر و انتخاب کیس بدانید</h4>
-<p class="text-gray-600 text-justify"> 
+<h4 class="text-2xl font-bold text-ice red:text-electric-red  mb-4">نکاتی که باید قبل از خرید کامپیوتر و انتخاب کیس بدانید</h4>
+<p class="text-ice red:text-electric-red text-justify"> 
 در پارسی الکترونیک، باور داریم انتخاب یک کامپیوتر مناسب، نیازمند شناخت دقیق قطعات و توجه به نوع کاربری شماست.
  پیش از خرید، بهتر است نیازهای خود را مشخص کنید تا بتوانید بهترین ترکیب سخت‌افزاری را انتخاب کنید.
   هنگام انتخاب کیس، به فضای داخلی، تهویه مناسب، تعداد فن‌ها و سازگاری با قطعات توجه داشته باشید. همچنین توان پاور، نوع مادربرد، پردازنده و کارت گرافیک از عواملی هستند که نباید نادیده گرفته شوند.
@@ -630,7 +630,7 @@
 
     <!-- footer start -->
 
-    <footer class="w-full  bg-[#171717] text-gray-300 pt-16 pb-8 border-t border-[#222222] ">
+    <footer class="w-full  bg-charcoal red:bg-ice text-gray-300 red:text-electric-red pt-16 pb-8 border-t border-[#222222] ">
 
 <div class="container mx-auto px-4">
 
@@ -641,13 +641,13 @@
 
     <div class="">
 
-      <h5 class="text-xl font-bold inline-block mb-8 relative text-[#1683FF]">درباره پارسی الکترونیک</h5>
+      <h5 class="text-xl font-bold inline-block mb-8 relative red:text-electric-red text-electric">درباره پارسی الکترونیک</h5>
 
       <ul class="text-sm space-y-3">
 
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#"> درباره ما</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="./all-project-main/index.html">معرفی صاحب فروشگاه</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#">تماس با ما</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:red:text-charcoal transition duration-200" href="#"> درباره ما</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:red:text-charcoal  transition duration-200" href="./all-project-main/index.html">معرفی صاحب فروشگاه</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:red:text-charcoal  transition duration-200" href="#">تماس با ما</a> </li>
 
       </ul>
 
@@ -656,14 +656,14 @@
 
  <div class="">
 
-      <h5 class="text-xl font-bold inline-block mb-8 relative text-[#1683FF]">خدمات ما</h5>
+      <h5 class="text-xl font-bold inline-block mb-8 relative red:text-electric-red  text-electric">خدمات ما</h5>
 
       <ul class="text-sm space-y-3">
         
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="./html/products.html"> همه محصولات</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="https://zitazi.com/toy/figures/">همکاری با زیتازی</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#cart-btn">سبد خرید</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#">مشاوره و دریافت کانفیگ</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="./html/products.html"> همه محصولات</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="https://zitazi.com/toy/figures/">همکاری با زیتازی</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="#cart-btn">سبد خرید</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="#">مشاوره و دریافت کانفیگ</a> </li>
         
       </ul>
 
@@ -674,13 +674,13 @@
 
  <div class="">
 
-      <h5 class="text-xl font-bold inline-block mb-8 relative text-[#1683FF]">راهنما مشتریان</h5>
+      <h5 class="text-xl font-bold inline-block mb-8 relative red:text-electric-red text-electric">راهنما مشتریان</h5>
 
       <ul class="text-sm space-y-3">
         
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#"> ارتقای سطح</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#">قوانین و مقررات</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#">حریم خصوصی</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="#"> ارتقای سطح</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="#">قوانین و مقررات</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="#">حریم خصوصی</a> </li>
        
       </ul>
 
@@ -691,7 +691,7 @@
 
     <div class="">
 
-      <h5 class="text-xl font-bold inline-block mb-8 relative text-[#1683FF]">نماد سایت و نماد اعتماد</h5>
+      <h5 class="text-xl font-bold inline-block mb-8 relative red:text-electric-red text-electric">نماد سایت و نماد اعتماد</h5>
  
       <div class=" flex items-center justify-center gap-4 ">
 
@@ -721,9 +721,9 @@
   </div>
 
 
-  <div class="border-t border-[#222222] flex flex-col pt-4 items-center justify-between text-sm text-gray-400">
+  <div class="border-t border-[#222222] flex flex-col pt-4 items-center justify-between text-sm text-ice red:text-charcoal">
 <p class="mb-2">کلیه حقوق محفوظ است 1405 </p>
-<p class="font-bold text-[#1683ff]">طراحی و توسعه توسط پدرام پیردستان</p>  
+<p class="font-bold red:text-electric-red text-electric">طراحی و توسعه توسط پدرام پیردستان</p>  
 </div>
 
 

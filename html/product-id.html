@@ -9,8 +9,9 @@
     <script src="../Js/cart.js" defer></script>
   <script src="../Js/registerLogin.js" defer></script>
   <script src="../Js/product-id.js" defer></script>
+  <script src="../Js/them.js" defer></script>
 </head>
-<body>
+<body class="red:bg-ice red:text-charcoal bg-charcoal text-ice ">
 
 <div class="bg-white">
 
@@ -22,7 +23,7 @@
     
 <!-- start header -->
     
-     <header class="w-full bg-[#171717] text-white">
+      <header class="w-full bg-charcoal text-ice red:bg-ice red:text-electric-red">
       <!-- head bar -->
       <div
         class="container mx-auto flex items-center text-center justify-between px-6 py-4"
@@ -62,7 +63,7 @@
 
           <!-- left bar-b  -->
  <div id="registerLogin-btn"
-            class="bg-[#1683FF] flex text-center gap-2 transition hover:bg-[#0066D6] px-4 py-2 text-white whitespace-nowrap rounded-lg"
+            class="bg-electric-red flex text-center gap-2 transition hover:bg-charcoal hover:text-ice px-4 py-2 text-white whitespace-nowrap rounded-lg"
           >
             <a href="./login.html"><p>ورود</p></a>
             <span>|</span>
@@ -71,11 +72,21 @@
 
 
           <div id="user-prof" class="hidden items-center gap-4">
-<span id="userN-dis" class="text-sm font-semibold text-[#1683ff]"></span>
-<button id="logout-btn" class="bg-red-500 hover:bg-[#572727] text-sm text-white rounded-lg transition px-4 py-2">
+<span id="userN-dis" class="text-sm font-semibold text-electric red:text-electric-red"></span>
+<button id="logout-btn" class="bg-electric hover:text-electric hover:bg-ice red:bg-electric-red cursor-pointer red:hover:bg-charcoal red:hover:text-ice text-sm text-white rounded-lg transition px-4 py-2">
 
   خروج
 </button>
+
+   <div>
+                      <button id="theme-toggle" class="text-2xl cursor-pointer hover:scale-110 transition duration-300 p-1" aria-label="تغییر تم">
+                        <span class="them">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="32px" height="32px" viewBox="0 0 24 24"><path d="M3,11.985A9.811,9.811,0,0,0,12.569,22a9.528,9.528,0,0,0,8.309-5.059,1,1,0,0,0-.947-1.477l-.11.008c-.131.01-.263.02-.4.02a7.811,7.811,0,0,1-7.569-8.015,8.378,8.378,0,0,1,1.016-4A1,1,0,0,0,11.923,2,9.855,9.855,0,0,0,3,11.985Zm7.343-7.652a10.382,10.382,0,0,0-.488,3.144A9.89,9.89,0,0,0,18.137,17.4,7.4,7.4,0,0,1,12.569,20,7.811,7.811,0,0,1,5,11.985,7.992,7.992,0,0,1,10.343,4.333Z"/></svg>
+                        </span>
+                        
+                        </button>
+
+                    </div>
 
           </div>
           <!-- left bar-b  -->
@@ -86,20 +97,20 @@
       <!-- head bar -->
 
       <!-- foot bar -->
-      <div class="bg-[#0066D6] flex p-1 pl-0 pr-0">
+      <div class="bg-electric red:bg-electric-red flex p-1 pl-0 pr-0">
         <nav
-          class="bg-[#171717] flex w-full h-12 items-stretch px-4 justify-center text-center"
+          class="bg-charcoal red:bg-ice flex w-full h-12 items-stretch px-4 justify-center text-center"
         >
           <ul
-            class="bg-[#171717] flex gap-10 w-full h-full container px-4 text-center"
+            class="bg-charcoal red:bg-ice flex gap-10 w-full h-full container px-4 text-center"
           >
             <a
-              class="hover:bg-[#0066D6] flex items-center px-4 transition"
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white flex items-center px-4 transition"
               href="../index.html"
               ><li>صفحه اصلی</li></a
             >
             <a
-              class="hover:bg-[#0066D6] flex items-center px-4 transition"
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white flex items-center px-4 transition"
               href="#"
               ><li>مشاوره و دریافت کانفیگ</li></a
             >
@@ -116,11 +127,11 @@
 
 
 
-      <!-- cart open -->
+       <!-- cart open -->
 
         <div id="cart-over" class="fixed inset-0 bg-black/30 backdrop-blur hidden z-40 transition-opacity duration-800"></div>
 
-<div class="fixed top-0 right-0 h-full w-[400px] z-50 shadow-2xl transform translate-x-full  transition-transform duration-500 flex flex-col border-r border-gray-800  " id="cart-sidebar">
+<div class="fixed top-0 right-0 h-full w-[400px] z-50 shadow-2xl transform translate-x-full  transition-transform duration-500 flex flex-col border-r border-gray-800 bg-ice text-charcoal red:bg-charcoal red:text-ice  " id="cart-sidebar">
 
   <div  class="flex items-center  justify-between p-4 border-b border-gray-800">
 <span class="text-xl font-bold text-white">سبد خرید شما</span>
@@ -142,15 +153,15 @@
 
 
 
-  <div class="p-4 border-t border-gray-800 bg-[#171717]">
+  <div class="p-4 border-t border-gray-300 bg-ice text-charcoal red:bg-charcoal red:text-ice">
 <div class="flex items-center justify-between mb-4 ">
 
-  <span class="text-gray-400 font-semibold ">جمع کل:</span>
-  <span id="cart-all-price" class="text-xl font-bold text-[#1683ff]"> 0 تومان</span>
+  <span class="text-gray-600 red:text-gray-400 font-semibold ">جمع کل:</span>
+  <span id="cart-all-price" class="text-xl font-bold text-electric red:text-electric-red"> 0 تومان</span>
 
 </div>
 
-<div id="chek" class="w-full cursor-pointer bg-[#1683FF] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl">
+<div id="chek" class="w-full cursor-pointer  bg-electric text-center transition duration-300 hover:bg-[#0066D6] red:hover:bg-[#d60000] red:bg-electric-red font-bold text-white py-4  rounded-xl">
 <span>تکمیل خرید</span>
 </div>
 
@@ -167,9 +178,9 @@
 <!-- start main -->
 
 
-<main class="w-fit min-h-screen py-10">
+<main class="w-full red:bg-ice red:text-charcoal bg-charcoal text-ice py-8 ">
 
-    <div class="container mx-auto px-4">
+    <div class="container my-20 mx-auto px-4">
 
         <div id="product-id" class="grid grid-cols-2 gap-10">
 
@@ -196,8 +207,7 @@
 
 <!-- start footer -->
 
-
-    <footer class="w-full  bg-[#171717] text-gray-300 pt-16 pb-8 border-t border-[#222222] ">
+ <footer class="w-full  bg-charcoal red:bg-ice text-gray-300 red:text-electric-red pt-16 pb-8 border-t border-[#222222] ">
 
 <div class="container mx-auto px-4">
 
@@ -208,13 +218,13 @@
 
     <div class="">
 
-      <h5 class="text-xl font-bold inline-block mb-8 relative text-[#1683FF]">درباره پارسی الکترونیک</h5>
+      <h5 class="text-xl font-bold inline-block mb-8 relative red:text-electric-red text-electric">درباره پارسی الکترونیک</h5>
 
       <ul class="text-sm space-y-3">
 
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#"> درباره ما</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#">معرفی صاحب فروشگاه</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#">تماس با ما</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:red:text-charcoal transition duration-200" href="#"> درباره ما</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:red:text-charcoal  transition duration-200" href="../all-project-main/index.html">معرفی صاحب فروشگاه</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:red:text-charcoal  transition duration-200" href="#">تماس با ما</a> </li>
 
       </ul>
 
@@ -223,14 +233,14 @@
 
  <div class="">
 
-      <h5 class="text-xl font-bold inline-block mb-8 relative text-[#1683FF]">خدمات ما</h5>
+      <h5 class="text-xl font-bold inline-block mb-8 relative red:text-electric-red  text-electric">خدمات ما</h5>
 
       <ul class="text-sm space-y-3">
         
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#"> همه محصولات</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#">همکاری با زیتازی</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#">سبد خرید</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#">مشاوره و دریافت کانفیگ</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="./products.html"> همه محصولات</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="https://zitazi.com/toy/figures/">همکاری با زیتازی</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="#cart-btn">سبد خرید</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="#">مشاوره و دریافت کانفیگ</a> </li>
         
       </ul>
 
@@ -241,13 +251,13 @@
 
  <div class="">
 
-      <h5 class="text-xl font-bold inline-block mb-8 relative text-[#1683FF]">راهنما مشتریان</h5>
+      <h5 class="text-xl font-bold inline-block mb-8 relative red:text-electric-red text-electric">راهنما مشتریان</h5>
 
       <ul class="text-sm space-y-3">
         
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#"> ارتقای سطح</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#">قوانین و مقررات</a> </li>
-        <li> <a class="hover:text-[#1693ff] transition duration-200" href="#">حریم خصوصی</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="#"> ارتقای سطح</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="#">قوانین و مقررات</a> </li>
+        <li> <a class="hover:text-[#1693ff] red:hover:text-charcoal transition duration-200" href="#">حریم خصوصی</a> </li>
        
       </ul>
 
@@ -258,7 +268,7 @@
 
     <div class="">
 
-      <h5 class="text-xl font-bold inline-block mb-8 relative text-[#1683FF]">نماد سایت و نماد اعتماد</h5>
+      <h5 class="text-xl font-bold inline-block mb-8 relative red:text-electric-red text-electric">نماد سایت و نماد اعتماد</h5>
  
       <div class=" flex items-center justify-center gap-4 ">
 
@@ -288,16 +298,15 @@
   </div>
 
 
-  <div class="border-t border-[#222222] flex flex-col pt-4 items-center justify-between text-sm text-gray-400">
+  <div class="border-t border-[#222222] flex flex-col pt-4 items-center justify-between text-sm text-ice red:text-charcoal">
 <p class="mb-2">کلیه حقوق محفوظ است 1405 </p>
-<p class="font-bold text-[#1683ff]">طراحی و توسعه توسط پدرام پیردستان</p>  
+<p class="font-bold red:text-electric-red text-electric">طراحی و توسعه توسط پدرام پیردستان</p>  
 </div>
 
 
 </div>
 
     </footer>
-
 
 <!-- end footer -->
 
