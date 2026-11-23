@@ -187,15 +187,7 @@ Btn.onclick = (e) => {
    })
 
    
-   document.querySelectorAll(".remove-item-btn").forEach((Btn) => {
-       Btn.onclick = (e) => {
-           const idRemov = e.currentTarget.getAttribute("data-id")
-            cart = cart.filter((item) => item.id !== idRemov)
-           localStorage.setItem("parsiCart" , JSON.stringify(cart))
-           renderCart()
-           ShowToset("محصول از سبد خرید حذف شد.", "error")
-       }
-   })
+
    
     document.querySelectorAll(".increase-qty").forEach((Btn) => {
           Btn.onclick = (e) => {

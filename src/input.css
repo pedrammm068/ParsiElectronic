@@ -19,3 +19,13 @@ width: 10px ;
     background: #0066D6;
     border-radius: 12px ;
 }
+
+@custom-variant red (&:where(.red-theme, .red-theme *));
+
+@theme {
+    --color-electric: #1683FF;
+    --color-charcoal: #171717;
+    --color-ice: #F0F4F8;
+    --color-electric-red: #FF1744;
+    --color-red-hover: #D50032;
+}

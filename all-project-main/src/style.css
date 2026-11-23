@@ -1,0 +1,19 @@
+.bg-back{
+    background-image: linear-gradient(112deg, #0E1C28 53.9%, #ffffff 50%);
+}
+.h1-font {
+    font-family: 'Brush Script MT', cursive;
+}
+.border-tow {
+    border: 5px solid white;
+    
+}
+.shad{
+    box-shadow: 4px 4px 4px;
+}
+.fo {
+font-size: 16px;
+}
+.fo-te {
+    font-size: 20px;
+    }

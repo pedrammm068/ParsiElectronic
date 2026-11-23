@@ -21,21 +21,20 @@ products.forEach(product => {
 
     <div class="product-card rounded-2xl bg-[#171717] border border-b-gray-100 shadow-lg hover:shadow-2xl flex flex-col 
 overflow-hidden group transition duration-300">
-
+<a href="./product-id.html?id=${product.id}" class="block">
 <div class="p-4 h-56 bg-[#222222] flex items-center justify-center relative">
 
     <img class="max-h-full transition duration-500 object-contain group-hover:scale-110" src="${product.image}" alt="${product.title}">
 
 </div>
-
+</a>
 <div class="p-5 flex flex-col grow">
 
 
               <span class="text-lg font-bold text-white">مشخصات:</span>
-
-     <h3 class="text-lg font-bold mb-2 text-white leading-snug">${product.title}</h3>
-             
-
+<a href="./product-product-id?id=${product.id}">
+     <h3 class="text-lg font-bold mb-2 text-white leading-snug">${product.title}</h3>      
+</a>
               <div class="flex items-center justify-between mt-auto mb-4">
               <span class="text-sm text-green-500">${product.status}</span>
               <div class="flex items-center justify-center text-center gap-2 ">
