@@ -308,9 +308,6 @@
   .left-3 {
     left: calc(var(--spacing) * 3);
   }
-  .left-4 {
-    left: calc(var(--spacing) * 4);
-  }
   .left-\[-15\.5rem\] {
     left: -15.5rem;
   }
@@ -322,9 +319,6 @@
   }
   .z-10 {
     z-index: 10;
-  }
-  .z-20 {
-    z-index: 20;
   }
   .z-40 {
     z-index: 40;
@@ -404,12 +398,6 @@
   .mt-15 {
     margin-top: calc(var(--spacing) * 15);
   }
-  .mt-16 {
-    margin-top: calc(var(--spacing) * 16);
-  }
-  .mt-24 {
-    margin-top: calc(var(--spacing) * 24);
-  }
   .mt-56 {
     margin-top: calc(var(--spacing) * 56);
   }
@@ -439,9 +427,6 @@
   }
   .mb-14 {
     margin-bottom: calc(var(--spacing) * 14);
-  }
-  .mb-16 {
-    margin-bottom: calc(var(--spacing) * 16);
   }
   .mb-18 {
     margin-bottom: calc(var(--spacing) * 18);
@@ -496,9 +481,6 @@
   .h-9 {
     height: calc(var(--spacing) * 9);
   }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
-  }
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
@@ -537,12 +519,6 @@
   }
   .h-\[400px\] {
     height: 400px;
-  }
-  .h-\[500px\] {
-    height: 500px;
-  }
-  .h-auto {
-    height: auto;
   }
   .h-fit {
     height: fit-content;
@@ -588,9 +564,6 @@
   }
   .w-9 {
     width: calc(var(--spacing) * 9);
-  }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
@@ -639,9 +612,6 @@
   }
   .w-max {
     width: max-content;
-  }
-  .max-w-5xl {
-    max-width: var(--container-5xl);
   }
   .max-w-16 {
     max-width: calc(var(--spacing) * 16);
@@ -770,12 +740,6 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
-  .gap-8 {
-    gap: calc(var(--spacing) * 8);
-  }
-  .gap-9 {
-    gap: calc(var(--spacing) * 9);
-  }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
@@ -903,15 +867,6 @@
   }
   .border-red-500 {
     border-color: var(--color-red-500);
-  }
-  .border-white\/20 {
-    border-color: color-mix(in srgb, #fff 20%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
-    }
-  }
-  .border-t-gray-300 {
-    border-top-color: var(--color-gray-300);
   }
   .border-b-gray-100 {
     border-bottom-color: var(--color-gray-100);
@@ -1057,12 +1012,6 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-white\/60 {
-    background-color: color-mix(in srgb, #fff 60%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 60%, transparent);
-    }
-  }
   .bg-yellow-50 {
     background-color: var(--color-yellow-50);
   }
@@ -1071,15 +1020,6 @@
   }
   .object-contain {
     object-fit: contain;
-  }
-  .object-cover {
-    object-fit: cover;
-  }
-  .object-fill {
-    object-fit: fill;
-  }
-  .object-center {
-    object-position: center;
   }
   .p-0 {
     padding: 0px;
@@ -1119,9 +1059,6 @@
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
-  }
-  .px-10 {
-    padding-inline: calc(var(--spacing) * 10);
   }
   .py-1 {
     padding-block: var(--spacing);
@@ -1463,10 +1400,6 @@
     --tw-duration: 500ms;
     transition-duration: 500ms;
   }
-  .duration-700 {
-    --tw-duration: 700ms;
-    transition-duration: 700ms;
-  }
   .duration-800 {
     --tw-duration: 800ms;
     transition-duration: 800ms;
@@ -1482,12 +1415,6 @@
     :is(:where(.group):hover .group-hover\:block) {
       display: block;
     }
-    :is(:where(.group):hover .group-hover\:scale-90) {
-      --tw-scale-x: 90%;
-      --tw-scale-y: 90%;
-      --tw-scale-z: 90%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
-    }
     :is(:where(.group):hover .group-hover\:scale-105) {
       --tw-scale-x: 105%;
       --tw-scale-y: 105%;
@@ -1502,9 +1429,6 @@
     }
     :is(:where(.group):hover .group-hover\:bg-\[\#1683FF\]\/20) {
       background-color: color-mix(in oklab, #1683FF 20%, transparent);
-    }
-    :is(:where(.group):hover .group-hover\:opacity-100) {
-      opacity: 100%;
     }
     .hover\:scale-110:hover {
       --tw-scale-x: 110%;
@@ -1524,9 +1448,6 @@
     }
     .hover\:bg-charcoal:hover {
       background-color: var(--color-charcoal);
-    }
-    .hover\:bg-electric:hover {
-      background-color: var(--color-electric);
     }
     .hover\:bg-gray-100:hover {
       background-color: var(--color-gray-100);
@@ -1783,17 +1704,11 @@
         background-color: color-mix(in oklab, var(--color-electric-red) 50%, transparent);
       }
     }
-    .red\:hover\:bg-ice:where(.red-theme, .red-theme *):hover {
-      background-color: var(--color-ice);
-    }
     .red\:hover\:red\:text-charcoal:where(.red-theme, .red-theme *):hover:where(.red-theme, .red-theme *) {
       color: var(--color-charcoal);
     }
     .red\:hover\:text-charcoal:where(.red-theme, .red-theme *):hover {
       color: var(--color-charcoal);
-    }
-    .red\:hover\:text-electric-red:where(.red-theme, .red-theme *):hover {
-      color: var(--color-electric-red);
     }
     .red\:hover\:text-ice:where(.red-theme, .red-theme *):hover {
       color: var(--color-ice);

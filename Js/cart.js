@@ -229,7 +229,7 @@ chek.addEventListener("click" , (e) => {
            if (window.location.pathname.includes("/html/")) {
             window.location.href = "./checkout.html"
         } else {
-            window.location.href = "./html/checkout.html"
+            window.location.href = "./ParsiElectronic/html/checkout.html"
         }
 })
 

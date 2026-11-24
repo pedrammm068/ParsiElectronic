@@ -78,7 +78,7 @@ clearInterval(endtimer)
             
             document.body.appendChild(overlay);
             setTimeout(() => {
-                window.location.href = "../index.html"; 
+                window.location.href = "../../index.html"; 
 
             } , 3000)
     }
@@ -112,7 +112,7 @@ return
         ShowToset("پرداخت موفقیت امیز بود!", "")
 
         setTimeout(() => {
-            window.location.href = "../index.html"
+            window.location.href = "../../index.html"
         }, 1000)
 
     })
@@ -126,7 +126,7 @@ if (can) {
         ShowToset("پرداخت لغو شد!", "success")
 
         setTimeout(() => {
-            window.location.href = "../index.html"
+            window.location.href = "../../index.html"
         }, 1000)
 
     })

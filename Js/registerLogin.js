@@ -106,7 +106,7 @@ loginErrMsg.textContent = `خوش آمدید ${user.userN}! در حال انتق
 
 
         setTimeout(() => {
-            window.location.href = "../index.html"; 
+            window.location.href = "../../index.html"; 
         }, 1500);
 
 })
