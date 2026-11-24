@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link href="./src/output.css" rel="stylesheet" />
+
     <link
       rel="icon"
       href="img/Neon Faravahar Cybertech Emblem.png"
@@ -16,6 +18,8 @@
     <script src="./Js/cart.js" defer></script>
     <script src="./Js/product-id.js" defer></script>
     <script src="./Js/them.js" defer></script>
+    <script src="./Js/menu-mob.js" defer></script>
+    
 
 
 
@@ -28,10 +32,10 @@
     <header class="w-full bg-charcoal text-ice red:bg-ice red:text-electric-red">
       <!-- head bar -->
       <div
-        class="container mx-auto flex items-center text-center justify-between px-6 py-4"
+        class="container mx-auto flex flex-col sm:flex-row  items-center text-center justify-between px-6 py-4"
       >
         <!-- logo -->
-        <div class="flex items-center whitespace-nowrap gap-3">
+        <div class="flex  items-center whitespace-nowrap gap-12   md:gap-4">
           <a href="./index.html">
             <img
               class="w-14 h-14"
@@ -40,15 +44,36 @@
             />
           </a>
           <h1 class="text-xl font-bold">Parsi Electronic</h1>
+
+              <button class="md:hidden flex cursor-pointer  " id="mobile-Menu-btn">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="24px" height="24px" viewBox="0 -1 20 20" version="1.1">
+    
+    <title>hamburger</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs>
+
+</defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-210.000000, -887.000000)" fill="#000000">
+            <path d="M229,895 L211,895 C210.448,895 210,895.448 210,896 C210,896.553 210.448,897 211,897 L229,897 C229.552,897 230,896.553 230,896 C230,895.448 229.552,895 229,895 L229,895 Z M229,903 L211,903 C210.448,903 210,903.448 210,904 C210,904.553 210.448,905 211,905 L229,905 C229.552,905 230,904.553 230,904 C230,903.448 229.552,903 229,903 L229,903 Z M211,889 L229,889 C229.552,889 230,888.553 230,888 C230,887.448 229.552,887 229,887 L211,887 C210.448,887 210,887.448 210,888 C210,888.553 210.448,889 211,889 L211,889 Z" id="hamburger" sketch:type="MSShapeGroup">
+
+</path>
+        </g>
+    </g>
+</svg>
+</button>
         </div>
         <!-- logo -->
 
         <!-- left bar -->
 
-        <div class="flex items-center text-center gap-5">
+        <div class="flex items-cente text-center sm:gap-6">
+ 
+
+
           <!-- right bar-b  -->
 
-          <div id="cart-btn" class="flex text-center whitespace-nowrap gap-2 cursor-pointer">
+          <div id="cart-btn" class=" text-center items-center whitespace-nowrap gap-2 hidden md:flex cursor-pointer">
             <p>سبد خرید</p>
             <svg
               class="w-8 h-8"
@@ -61,12 +86,16 @@
               />
             </svg>
           </div>
+                   
           <!-- right bar-b  -->
 
+          
           <!-- left bar-b  -->
+       
+
 
           <div id="registerLogin-btn"
-            class="bg-electric-red flex text-center gap-2 transition hover:bg-charcoal hover:text-ice px-4 py-2 text-white whitespace-nowrap rounded-lg"
+            class="red:bg-electric-red bg-electric  flex text-center gap-2 transition hover:bg-ice hover:text-charcoal red:hover:bg-charcoal red:hover:text-electric-red px-4 py-2 text-white whitespace-nowrap rounded-lg"
           >
             <a href="./html/login.html"><p>ورود</p></a>
             <span>|</span>
@@ -74,8 +103,8 @@
           </div>
           
           
-          <div id="user-prof" class="hidden items-center gap-4">
-<span id="userN-dis" class="text-sm font-semibold text-electric red:text-electric-red"></span>
+          <div id="user-prof" class="hidden  items-center gap-4">
+<span id="userN-dis" class="text-sm hidden sm:flex font-semibold text-electric red:text-electric-red"></span>
 <button id="logout-btn" class="bg-electric hover:text-electric hover:bg-ice red:bg-electric-red cursor-pointer red:hover:bg-charcoal red:hover:text-ice text-sm text-white rounded-lg transition px-4 py-2">
 
   خروج
@@ -91,9 +120,14 @@
 
                     </div>
 
+
+
+
           </div>
 
+
           <!-- left bar-b  -->
+
         </div>
         <!-- left bar -->
       </div>
@@ -101,7 +135,8 @@
       <!-- head bar -->
 
       <!-- foot bar -->
-      <div class="bg-electric red:bg-electric-red flex p-1 pl-0 pr-0">
+
+      <div class="bg-electric hidden md:flex red:bg-electric-red p-1 pl-0 pr-0">
         <nav
           class="bg-charcoal red:bg-ice flex w-full h-12 items-stretch px-4 justify-center text-center"
         >
@@ -133,11 +168,65 @@
               href="#"
               ><li>درباره ما</li></a
             >
+          
+        
           </ul>
+
+
+
         </nav>
       </div>
 
       <!-- foot bar -->
+
+      <!-- mobail bar -->
+<div id="mobile_Menu" class="hidden h-full  absolute left-0 w-full bg-charcoal red:bg-ice red:border-gray-200 border-t bg-gray-800 shadow-2xl z-50 md:hidden ">
+
+  <ul class="flex flex-col p-4 space-y-4 text-center"
+          >
+            <a
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white py-2 rounded-lg transition"
+              href="./index.html"
+              ><li>صفحه اصلی</li></a
+            >
+            <a
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white py-2 rounded-lg transition"
+              href="#boro"
+              ><li>محصولات</li></a
+            >
+            <a
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white py-2 rounded-lg transition"
+              href="#"
+              ><li>مشاوره و دریافت کانفیگ</li></a
+            >
+            <a
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white py-2 rounded-lg transition"
+              href="#"
+              ><li>دانستنی ها</li></a
+              
+            >
+            <a
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white py-2 rounded-lg transition"
+              href="#"
+              ><li>درباره ما</li></a
+            >
+
+
+                  <a onclick="OpenCart()"
+              class="hover:bg-[#0066D6] hover:red:bg-electric-red hover:text-white py-2 rounded-lg transition"
+              href="#"
+              ><li>سبد خرید</li></a
+            >
+
+
+
+          </ul>
+
+
+</div>
+  <!-- mobail bar -->
+
+
     </header>
 
     <!-- Header end -->
@@ -154,7 +243,7 @@
         <div id="cart-over" class="fixed inset-0 bg-black/30 backdrop-blur hidden z-40 transition-opacity duration-800"></div>
 
 
-<div class="fixed top-0 right-0 h-full w-[400px] z-50 shadow-2xl transform translate-x-full transition-transform duration-500 flex flex-col border-r border-gray-800 bg-ice text-charcoal red:bg-charcoal red:text-ice" id="cart-sidebar">
+<div class="fixed top-0 max-md:w-full right-0 h-full w-[400px] z-50 shadow-2xl transform translate-x-full transition-transform duration-500 flex flex-col border-r border-gray-800 bg-ice text-charcoal red:bg-charcoal red:text-ice" id="cart-sidebar">
 
   <div  class="flex items-center  justify-between p-4 border-b border-gray-800">
 <span class="text-xl font-bold">سبد خرید شما</span>
@@ -172,7 +261,7 @@
 
 <p class="mt-10 text-center text-gray-500">سبد خرید شما خالیه</p>
 
-  </div>s
+  </div>
 
 
 
@@ -218,7 +307,7 @@
 
       <div class="container mx-auto px-4">
         <div
-          class="relative w-full group h-[500px] rounded-xl overflow-hidden shadow-lg"
+          class="relative w-full group h-[250px] md:h-[500px] rounded-xl overflow-hidden shadow-lg"
         >
           <div
             class="slide absolute inset-0 transition-opacity opacity-100 z-10 duration-700"
@@ -358,14 +447,14 @@
 </div>
 
 
-<div class="grid grid-cols-4 gap-8 mb-8">
+<div class="grid  grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
 
   <div class="product-card rounded-2xl bg-charcoal red:bg-ice/95 red:border-charcoal/25  shadow-lg hover:shadow-2xl border border-gray-100 flex flex-col  transition duration-300  overflow-hidden ">
 
   <a href="./html/product-id.html?id=1" class="block w-full h-full  justify-center items-center">
   <div class="p-4 h-56 bg-[#222222] red:bg-ice/95 red:border-charcoal/25 flex items-center justify-center  relative">
-    <img class="max-h-full transition duration-300 object-contain group-hover:scale-110 " src="./img/products/1.png" alt="PC1">
+    <img loading="lazy" class="max-h-full transition duration-300 object-contain group-hover:scale-110 " src="./img/products/1.png" alt="PC1">
 
   </div>
 </a>
@@ -400,7 +489,7 @@
 
  <a href="./html/product-id.html?id=2" class="block w-full h-full ">
   <div class="p-4 h-56 bg-[#222222] red:bg-ice/95 red:border-charcoal/25 flex items-center justify-center  relative">
-    <img class="max-h-full transition duration-300 object-contain group-hover:scale-110 " src="./img/products/2.png" alt="PC1">
+    <img loading="lazy" class="max-h-full transition duration-300 object-contain group-hover:scale-110 " src="./img/products/2.png" alt="PC1">
 
   </div>
 </a>
@@ -438,7 +527,7 @@
 
      <a href="./html/product-id.html?id=3" class=" w-full h-full block">
   <div class="p-4 h-56 bg-[#222222] red:bg-ice/95 red:border-charcoal/25 flex items-center justify-center  relative">
-    <img class="max-h-full transition duration-300 object-contain group-hover:scale-110 " src="./img/products/3.png" alt="PC1">
+    <img loading="lazy" class="max-h-full transition duration-300 object-contain group-hover:scale-110 " src="./img/products/3.png" alt="PC1">
 
   </div>
 </a>
@@ -478,7 +567,7 @@
 
  <a href="./html/product-id.html?id=4" class=" w-full h-full block">
   <div class="p-4 h-56 bg-[#222222] red:bg-ice/95 red:border-charcoal/25 flex items-center justify-center  relative">
-    <img class="max-h-full transition duration-300 object-contain group-hover:scale-110 " src="./img/products/4.png" alt="PC1">
+   <img  loading="lazy" class="max-h-full transition duration-300 object-contain group-hover:scale-110 " src="./img/products/4.png" alt="PC1">
 
   </div>
 </a>
@@ -512,7 +601,7 @@
 
 
 <div class="w-full flex justify-center mb-8 mt-4">
-  <a href="./html/products.html" class="bg-electric hover:bg-charcoal red:bg-electric-red red:hover:bg-ice red:hover:text-electric-red  text-white transition duration-800  font-bold text-lg py-3 px-10 rounded-xl shadow-lg">
+  <a href="./html/products.html" class="bg-electric hover:bg-charcoal red:bg-electric-red red:hover:bg-ice red:hover:text-electric-red  text-white transition duration-800  font-bold text-lg py-4 px-10 rounded-xl shadow-lg">
     تمام محصولات
   </a>
 </div>
@@ -530,10 +619,10 @@
 <div class="container mx-auto mt-24 mb-16 px-4">
 
   
-  <div class="overflow-hidden h-[500px] flex justify-between items-center  w-full rounded-2xl shadow-xl mb-8 group">
+  <div class="overflow-hidden h-[250px] md:h-[500px] flex justify-between items-center  w-full rounded-2xl shadow-xl mb-8 group">
 
 <a target="_blank" href="https://zitazi.com/toy/figures/">
-  <img class="w-full h-auto object-cover transition duration-1000 group-hover:scale-90 " src="./img/ad.png" alt="تبلیغات">
+  <img loading="lazy" class="w-full h-auto object-cover transition duration-1000 group-hover:scale-90 " src="./img/ad.png" alt="تبلیغات">
 </a>
 
   </div>
@@ -560,26 +649,26 @@
 
 <div class="container mx-auto mt-24 mb-16 px-4">
 
-<div class="grid grid-cols-3 gap-9 mb-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-9 mb-12">
 
   
   
   <div class="overflow-hidden rounded-2xl border border-t-gray-300 shadow-lg">
-    <img class="w-full h-96 object-cover" src="./img/Neon PC Case Showcase.png" alt="PC case">
+    <img loading="lazy" class="w-full h-96 md:object-cover" src="./img/Neon PC Case Showcase.png" alt="PC case">
     
   </div>
   
   
     <div class="overflow-hidden rounded-2xl border border-t-gray-300 shadow-lg">
   
-  <img class="w-full h-96 object-cover" src="./img/Neon Cyberpunk Gaming Case Ad.png" alt="PC case">
+  <img loading="lazy" class="w-full h-96 md:object-cover" src="./img/Neon Cyberpunk Gaming Case Ad.png" alt="PC case">
   
   </div>
 
 
 
   <div class="overflow-hidden rounded-2xl border border-t-gray-300 shadow-lg">
-<img class="w-full h-96 object-cover" src="./img/Neon Cyberpunk PC Showcase.png" alt="PC case">
+<img loading="lazy" class="w-full h-96 md:object-cover" src="./img/Neon Cyberpunk PC Showcase.png" alt="PC case">
 
 </div>
 
@@ -604,7 +693,7 @@
 
   <div class="w-full max-w-5xl rounded-3xl mx-auto overflow-hidden">
 
-    <video class="w-full h-[500px] object-center bg-[#171717]" poster="./img/Cyber Blue PC Buying Guide.png" controls >
+    <video loading="lazy" class="w-full h-[250px] md:h-[500px] object-cover bg-[#171717]" poster="./img/Cyber Blue PC Buying Guide.png" controls preload="none" >
 
       <source src="./img/vid.mp4" type="video/mp4">
 
@@ -635,7 +724,7 @@
 <div class="container mx-auto px-4">
 
 
-  <div class="grid grid-cols-4 gap-10 mb-18">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-18">
 
 
 
@@ -697,7 +786,7 @@
 
 
   <div class=" w-28 h-28 flex items-center justify-center ">
-    <img class="max-w-full max-h-full object-contain" src="./img/parsiel.png" alt="">
+    <img loading="lazy" class="max-w-full max-h-full object-contain" src="./img/parsiel.png" alt="">
 
   </div>
 
@@ -705,7 +794,7 @@
 
   <div class=" w-28 h-28 flex items-center justify-center ">
    
-    <img class="max-w-full max-h-full object-contain" src="./img/namad.png" alt="">
+    <img loading="lazy" class="max-w-full max-h-full object-contain" src="./img/namad.png" alt="">
 
   </div>
 

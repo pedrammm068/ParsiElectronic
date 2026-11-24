@@ -39,7 +39,7 @@
         class="container mx-auto flex items-center text-center justify-between px-6 py-4"
       >
         <!-- logo -->
-        <div class="flex items-center whitespace-nowrap gap-3">
+        <div class="flex gap-2 items-center whitespace-nowrap ">
           <a href="../index.html">
             <img
               class="w-14 h-14"
@@ -53,11 +53,11 @@
 
         <!-- left bar -->
 
-        <div class="flex items-center text-center gap-5">
+        <div class="flex items-center flex-col sm:flex-row text-center gap-5">
           <!-- right bar-b  -->
 
           <div id="cart-btn" class="flex text-center whitespace-nowrap gap-2 cursor-pointer">
-            <p>سبد خرید</p>
+            <p class="sm:block hidden">سبد خرید</p>
             <svg
               class="w-8 h-8"
               xmlns="http://www.w3.org/2000/svg"
@@ -73,16 +73,17 @@
 
           <!-- left bar-b  -->
  <div id="registerLogin-btn"
-            class="bg-electric-red flex text-center gap-2 transition hover:bg-charcoal hover:text-ice px-4 py-2 text-white whitespace-nowrap rounded-lg"
+            class="bg-electric-red  flex text-center gap-2 transition hover:bg-charcoal hover:text-ice px-4 py-2 text-white whitespace-nowrap rounded-lg"
           >
             <a href="./login.html"><p>ورود</p></a>
             <span>|</span>
             <a href="./register.html"><p>ثبت نام</p></a>
           </div>
+     
 
 
           <div id="user-prof" class="hidden items-center gap-4">
-<span id="userN-dis" class="text-sm font-semibold text-electric red:text-electric-red"></span>
+<span id="userN-dis" class="text-sm hidden sm:flex font-semibold text-electric red:text-electric-red"></span>
 <button id="logout-btn" class="bg-electric hover:text-electric hover:bg-ice red:bg-electric-red cursor-pointer red:hover:bg-charcoal red:hover:text-ice text-sm text-white rounded-lg transition px-4 py-2">
 
   خروج
@@ -139,7 +140,7 @@
 
         <div id="cart-over" class="fixed inset-0 bg-black/30 backdrop-blur hidden z-40 transition-opacity duration-800"></div>
 
-<div class="fixed top-0 right-0 h-full w-[400px] z-50 shadow-2xl transform translate-x-full  transition-transform duration-500 flex flex-col border-r border-gray-800 bg-ice text-charcoal red:bg-charcoal red:text-ice  " id="cart-sidebar">
+<div class="fixed top-0 right-0 h-full max-md:w-full w-[400px] z-50 shadow-2xl transform translate-x-full  transition-transform duration-500 flex flex-col border-r border-gray-800 bg-ice text-charcoal red:bg-charcoal red:text-ice  " id="cart-sidebar">
 
   <div  class="flex items-center  justify-between p-4 border-b border-gray-800">
 <span class="text-xl font-bold text-white">سبد خرید شما</span>
@@ -195,7 +196,7 @@
 
 
 
-<div id="products_container" class="grid grid-cols-4 gap-6 ">
+<div id="products_container" class="grid  grid-cols-1 md:grid-cols-4 gap-6 ">
 
 
 <p class="red:text-charcoal text-ice text-center col-span-full ">درحال بارگذاری محصولات...</p>
@@ -218,7 +219,7 @@
 <div class="container mx-auto px-4">
 
 
-  <div class="grid grid-cols-4 gap-10 mb-18">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-18">
 
 
 

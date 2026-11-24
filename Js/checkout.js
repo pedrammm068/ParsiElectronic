@@ -108,6 +108,8 @@ return
 <span> در حال پردازش... </span>`
             pay.disabled = true
          clearInterval(endtimer)
+         localStorage.removeItem("parsiCart")
+
 
         ShowToset("پرداخت موفقیت امیز بود!", "")
 

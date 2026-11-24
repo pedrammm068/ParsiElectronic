@@ -7,7 +7,13 @@ const toast = document.getElementById("toast")
  const cartconteiner = document.getElementById("cart-item-conteiner")
  const allprice = document.getElementById("cart-all-price")
  const chek =  document.getElementById("chek")
+ const mobMenu = document.getElementById("mobile_Menu")
 function OpenCart () {
+
+    if(mobMenu) {
+        mobMenu.classList.add("hidden")
+    }
+
     if(cartsidebar) {
         cartsidebar.classList.remove("translate-x-full")
 

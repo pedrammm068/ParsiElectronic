@@ -25,6 +25,8 @@
     background: var(--sb-thumb-hover);
 }
 
+
+
 @custom-variant red (&:where(.red-theme, .red-theme *));
 
 @theme {

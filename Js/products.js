@@ -24,7 +24,7 @@ overflow-hidden group transition duration-300">
 <a href="./product-id.html?id=${product.id}" class="block">
 <div class="p-4 h-56  bg-charcoal red:bg-ice/95 red:border-charcoal/25 flex items-center justify-center relative">
 
-    <img class="max-h-full transition duration-500 object-contain group-hover:scale-110" src="${product.image}" alt="${product.title}">
+    <img loading="lazy" class="max-h-full transition duration-500 object-contain group-hover:scale-110" src="${product.image}" alt="${product.title}">
 
 </div>
 </a>

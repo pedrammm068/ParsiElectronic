@@ -156,6 +156,7 @@ if(userNdis) {
 if(logoutbtn) {
     logoutbtn.addEventListener( "click",() => {
 localStorage.removeItem("parsiLogInUser")
+ localStorage.removeItem("parsiCart")
 window.location.reload()
     })
 }
