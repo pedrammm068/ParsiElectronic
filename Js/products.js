@@ -32,26 +32,36 @@ overflow-hidden group transition duration-300">
 
 
               <span class="text-lg font-bold text-white red:text-electric-red">مشخصات:</span>
-<a href="./product-product-id?id=${product.id}">
+<a href="./product-id.html?id=${product.id}">
      <h3 class="text-lg font-bold mb-2 red:text-electric-red text-white leading-snug">${product.title}</h3>      
 </a>
               <div class="flex items-center justify-between mt-auto mb-4">
-              <span class="text-sm red:text-charcoal text-green-500">${product.status}</span>
               <div class="flex  items-center justify-center text-center gap-2 ">
               <span class="text-lg font-bold red:text-electric-red text-white">قیمت:</span>
               <span class="text-lg font-bold red:text-electric-red text-white">${product.price}</span>
               </div>
+              <span class="text-sm red:text-charcoal text-green-500">${product.status}</span>
               </div>
 
-              <button  data-id="${product.id}"
-        data-name="${product.title}"
-        data-price="${product.price.replace(/,/g, '')}"
-        data-image="${product.image}"
-         class="add-to-cart-btn w-full cursor-pointer bg-electric red:bg-electric-red red:text-ice red:hover:bg-[#d60007] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4 rounded-xl">
-                             
-              افزودن به سبد خرید
-            
-              </button>
+              <div class="flex gap-4 w-full md:flex-col">
+  
+  <div class="cursor-pointer w-1/2 bg-electric red:bg-electric-red md:w-full red:text-ice red:hover:bg-[#d60007] md:hidden text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4  rounded-xl ">
+    <a href="./product-id.html?id=${product.id}" class="">دیدن جزیات محصول</a>
+  </div>
+
+
+  <button  data-id="${product.id}"
+  data-name="${product.title}"
+  data-price="${product.price.replace(/,/g, '')}"
+  data-image="${product.image}"
+  class="add-to-cart-btn  md:w-full w-1/2 cursor-pointer bg-electric red:bg-electric-red red:text-ice red:hover:bg-[#d60007] text-center transition duration-300 hover:bg-[#0066D6] font-bold text-white py-4 rounded-xl">
+                 
+  افزودن به سبد خرید
+  
+  </button>
+  
+</div>
+
             </div>
 
 </div>
